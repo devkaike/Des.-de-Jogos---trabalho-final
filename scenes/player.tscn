@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://df68j5ft3l6wr"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7qcv4"]
+size = Vector2(20, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnrsp"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_7qcv4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wnrsp")
