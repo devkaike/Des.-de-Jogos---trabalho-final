@@ -6,6 +6,8 @@ extends Node2D
 
 var distance : float = 400
 
+@export var enemy_types : Array[Enemy]
+
 var minute : int:
 	set(value):
 		minute = value
@@ -23,6 +25,8 @@ var second : int:
 func spawn(pos : Vector2):
  
 	var enemy_instance = enemy.instantiate()
+	
+	enemy_instance.type = enemy_types[min(minute, enemy_types.size()-1)]
 	enemy_instance.position = pos
 	enemy_instance.player_reference = player
 	
@@ -38,3 +42,8 @@ func amount(number : int = 1):
 func _on_timer_timeout():
 	second += 1
 	amount(second % 10)
+
+
+func _on_pattern_timeout():
+	for i in range(75):
+		spawn(get_random_position())

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://dggxqj8706sbs"]
+
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="1_jwflx"]
+[ext_resource type="Texture2D" uid="uid://djqoae6vmtike" path="res://RPG Battlers/1 v1.png" id="2_ec3ua"]
+
+[resource]
+script = ExtResource("1_jwflx")
+title = "Eye"
+texture = ExtResource("2_ec3ua")
+health = 0.0
+damage = 1.0
