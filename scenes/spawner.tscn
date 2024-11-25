@@ -1,19 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://br8iry6wj1ey2"]
+[gd_scene load_steps=8 format=3 uid="uid://cw3jpck5mkf8d"]
 
-[ext_resource type="Script" path="res://scenes/spawner.gd" id="1_3mn5c"]
-[ext_resource type="PackedScene" uid="uid://byeu2nwyhctfp" path="res://scenes/enemy.tscn" id="2_tq3qw"]
+[ext_resource type="Script" path="res://scripts/spawner.gd" id="1_o4c63"]
+[ext_resource type="PackedScene" uid="uid://70mrj8ythp2n" path="res://scenes/enemy.tscn" id="2_nk5yw"]
+[ext_resource type="Script" path="res://resources/EnemyType.gd" id="3_xshps"]
+[ext_resource type="Resource" uid="uid://dlbwmpq1os1ao" path="res://resources/enemy/cube.tres" id="4_67jk3"]
+[ext_resource type="Resource" uid="uid://tdu5xgm33tot" path="res://resources/enemy/eye.tres" id="5_fx6kq"]
+[ext_resource type="Resource" uid="uid://vng0ykf2oixg" path="res://resources/enemy/EyeLogs.tres" id="6_1876g"]
+[ext_resource type="Resource" uid="uid://bw1vco5ku2fqq" path="res://resources/enemy/triples.tres" id="7_3cyuv"]
 
 [node name="Spawner" type="Node2D"]
-script = ExtResource("1_3mn5c")
-enemy = ExtResource("2_tq3qw")
+script = ExtResource("1_o4c63")
+enemy = ExtResource("2_nk5yw")
+enemy_types = Array[ExtResource("3_xshps")]([ExtResource("4_67jk3"), ExtResource("5_fx6kq"), ExtResource("6_1876g"), ExtResource("7_3cyuv")])
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI"]
-offset_left = 1054.0
-offset_top = 46.0
-offset_right = 1096.0
-offset_bottom = 86.0
+offset_left = 1016.0
+offset_top = 60.0
+offset_right = 1058.0
+offset_bottom = 100.0
 
 [node name="Minute" type="Label" parent="UI/HBoxContainer"]
 unique_name_in_owner = true
@@ -41,3 +47,5 @@ wait_time = 9.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Pattern" to="." method="_on_pattern_timeout"]
+[connection signal="timeout" from="Elite" to="." method="_on_elite_timeout"]
