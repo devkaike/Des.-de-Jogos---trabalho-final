@@ -11,6 +11,8 @@ size = Vector2(20, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2l15"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avfjp"]
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_dir11")
 

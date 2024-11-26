@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://cjyojfxonsfl"]
+
+[ext_resource type="Script" path="res://scenes/EnemyType.gd" id="1_6yq6p"]
+[ext_resource type="Texture2D" uid="uid://co04i84ho04ec" path="res://RPG Battlers/4 v1.png" id="2_ke30f"]
+
+[resource]
+script = ExtResource("1_6yq6p")
+title = "Triple"
+texture = ExtResource("2_ke30f")
+health = 0.0
+damage = 9.0
