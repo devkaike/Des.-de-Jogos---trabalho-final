@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://6vegkb12ebbc"]
+
+[ext_resource type="Texture2D" uid="uid://cxa88miqu2jqb" path="res://assets/RPG Battlers 3/15 v1.png" id="1_0jrmy"]
+[ext_resource type="Script" path="res://resources/pickup/gem.gd" id="2_y4kng"]
+
+[resource]
+script = ExtResource("2_y4kng")
+XP = 1.0
+title = "Blue Gem"
+icon = ExtResource("1_0jrmy")
+description = "Gains Experiinece points"
