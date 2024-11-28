@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=10 format=3 uid="uid://fm2fcuxgc1a0"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=12 format=3 uid="uid://fm2fcuxgc1a0"]
 
 [ext_resource type="PackedScene" uid="uid://bq72l6ses06lq" path="res://scenes/projectile.tscn" id="1_cnnsu"]
+[ext_resource type="Resource" uid="uid://eowpbh85md83" path="res://resources/waepons/goly_wand_2.tres" id="1_seyk2"]
 [ext_resource type="Script" path="res://resources/single_shot.gd" id="2_jx575"]
+[ext_resource type="Resource" uid="uid://cuol77dwqabyw" path="res://resources/passive_items/orbe_poder.tres" id="2_sa6gh"]
 [ext_resource type="Texture2D" uid="uid://bq6n0fjmpbsrh" path="res://assets/waepons/magic-wand.png" id="3_iabby"]
 [ext_resource type="Script" path="res://resources/update.gd" id="4_kiktn"]
 [ext_resource type="Script" path="res://resources/projectile_upgrade.gd" id="5_28l0k"]
@@ -36,10 +38,12 @@ description = "-0.3 Cooldown"
 
 [resource]
 script = ExtResource("2_jx575")
-title = "Magic Wand"
-texture = ExtResource("3_iabby")
 damage = 1.0
 cooldown = 0.25
 speed = 200.0
 projectile_node = ExtResource("1_cnnsu")
+item_needed = ExtResource("2_sa6gh")
 upgrades = Array[ExtResource("4_kiktn")]([SubResource("Resource_vovqu"), SubResource("Resource_68xql"), SubResource("Resource_umh8e"), SubResource("Resource_1tqja")])
+evolution = ExtResource("1_seyk2")
+title = "Magic Wand"
+texture = ExtResource("3_iabby")

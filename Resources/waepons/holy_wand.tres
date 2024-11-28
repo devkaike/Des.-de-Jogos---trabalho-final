@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://cftsvdjk013ln"]
+
+[ext_resource type="PackedScene" uid="uid://bq72l6ses06lq" path="res://scenes/projectile.tscn" id="1_byqty"]
+[ext_resource type="Script" path="res://resources/weapon.gd" id="2_f0ium"]
+[ext_resource type="Texture2D" uid="uid://c2jliucn16vjh" path="res://assets/RPG Battlers 3/11 v1.png" id="3_7tadr"]
+[ext_resource type="Script" path="res://resources/update.gd" id="4_a3rp1"]
+
+[resource]
+script = ExtResource("2_f0ium")
+damage = 10.0
+cooldown = 0.1
+speed = 500.0
+projectile_node = ExtResource("1_byqty")
+upgrades = Array[ExtResource("4_a3rp1")]([])
+title = "Holy wand"
+texture = ExtResource("3_7tadr")
