@@ -1,35 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://hxk1k8b5tg6a"]
+[gd_scene load_steps=5 format=3 uid="uid://hxk1k8b5tg6a"]
 
 [ext_resource type="Texture2D" uid="uid://bq6n0fjmpbsrh" path="res://assets/waepons/magic-wand.png" id="1_p5xwf"]
 [ext_resource type="Script" path="res://scenes/option_slot.gd" id="2_71adv"]
-[ext_resource type="Texture2D" uid="uid://clw2iupwuyq53" path="res://assets/TopDownFantasy-Forest/Mockup3.png" id="3_dd6bb"]
+[ext_resource type="Texture2D" uid="uid://calpo341go812" path="res://assets/recourses/GUI-02.png" id="2_jisrh"]
+[ext_resource type="Texture2D" uid="uid://dhj7fm55qdhic" path="res://assets/recourses/GUI-06.png" id="3_egmsl"]
 
-[node name="OptionSlot" type="TextureButton"]
+[node name="OptionSlot" type="Button"]
 custom_minimum_size = Vector2(315, 48)
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 315.0
+offset_bottom = 48.0
 mouse_filter = 1
-texture_normal = ExtResource("1_p5xwf")
-ignore_texture_size = true
-stretch_mode = 4
 script = ExtResource("2_71adv")
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 51.0
-offset_top = 11.0
-offset_right = 91.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 58.0
+offset_top = -11.5
+offset_right = 98.0
+offset_bottom = 11.5
+grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 text = "Lv 2"
 
 [node name="Description" type="Label" parent="."]
-layout_mode = 0
-offset_left = 109.0
-offset_top = 11.0
-offset_right = 305.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -204.0
+offset_top = -11.5
+offset_right = -8.0
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "test"
 horizontal_alignment = 1
@@ -38,11 +47,34 @@ horizontal_alignment = 1
 modulate = Color(0.384314, 1, 1, 1)
 show_behind_parent = true
 custom_minimum_size = Vector2(315, 48)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.5
+offset_top = -24.0
+offset_right = 157.5
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jisrh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_top = 1.0
-offset_right = 40.0
-offset_bottom = 41.0
-texture = ExtResource("3_dd6bb")
-region_rect = Rect2(306.5, 0, 13.5, 20.5)
+offset_right = 49.0
+offset_bottom = 49.0
+texture = ExtResource("3_egmsl")
+
+[node name="ItemRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 44.0
+offset_bottom = 44.0
+texture = ExtResource("1_p5xwf")
+stretch_mode = 5
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

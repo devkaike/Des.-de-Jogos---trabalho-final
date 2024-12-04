@@ -1,4 +1,4 @@
-extends TextureButton
+extends Button
  
  
 @export var item : Item:
@@ -6,11 +6,13 @@ extends TextureButton
 		item = value
  
 		if value.upgrades.size() > 0 and value.upgrades.size() +1 != value.level:
-			texture_normal = value.texture
+			#texture_normal = value.texture
+			%ItemRect.texture = value.texture
 			$Label.text = "Lvl " + str(item.level + 1)
 			$Description.text = value.upgrades[value.level - 1].description
 		else:
-			texture_normal = value.evolution.texture
+			#texture_normal = value.evolution.texture
+			%ItemRect.texture = value.texture
 			$Label.text = ""
 			$Description.text = "EVOLUTION"
  

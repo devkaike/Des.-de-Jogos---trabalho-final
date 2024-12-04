@@ -1,17 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc2mnr7uonkq4"]
+[gd_scene load_steps=3 format=3 uid="uid://cc2mnr7uonkq4"]
 
 [ext_resource type="Script" path="res://scripts/slot.gd" id="1_xctxs"]
+[ext_resource type="Texture2D" uid="uid://dhj7fm55qdhic" path="res://assets/recourses/GUI-06.png" id="2_2lg00"]
 
 [node name="Slot" type="PanelContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_xctxs")
 
+[node name="Shape" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_2lg00")
+stretch_mode = 5
+
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-expand_mode = 1
-stretch_mode = 3
+texture = ExtResource("2_2lg00")
+stretch_mode = 5
 
 [node name="Cooldown" type="Timer" parent="."]
 autostart = true

@@ -4,23 +4,49 @@ var health : float = 100 :
 	set(value):
 		health = max(value,0)
 		%Health.value = value
+		if health <= 0:
+			get_tree().paused = true
 
-var armor:float = 0
-var might:float = 1.5
+var armor:float = 0:
+	set(value):
+		armor = value
+		%ArmorDebug.text = "Armor: "+ str(value) 
+
+var might:float = 1:
+	set(value):
+		might = value
+		%MightDebug.text = "Might: "+ str(value) 
+		
 var area: float = 50
 
 var max_health : float = 100.0 :
 	set(value):
 		max_health = value
 		%Health.max_value = value
+		%MaxHealthDebug.text = "MaxHealth: "+ str(value) 
 		
-var movement_speed:float = 150
-var recovery: float = 0
+		
+var movement_speed:float = 150:
+	set(value):
+		movement_speed = value
+		%MovementSpeedDebug.text = "Speed: "+ str(value) 
+		
+var recovery: float = 0:
+	set(value):
+		recovery = value
+		%RecoveryDebug.text = "Recovery: "+ str(value) 
+		
 var magnet: float = 0:
 	set(value):
 		magnet = value
 		%Magnet.shape.radius = 50 + value
-var growth: float = 1
+		%MagnetDebug.text = "Magnet: "+ str(value) 
+		
+var growth: float = 1:
+	set(value):
+		growth = value
+		%GrowthDebug.text = "Growth: "+ str(value) 
+		
 
 var XP : int = 0:
 	set(value):
@@ -41,6 +67,14 @@ var level : int = 1:
 			
 var nearest_enemy: CharacterBody2D
 var nearest_enemy_distance: float = 150 + area
+
+var gold: int = 0:
+	set(value):
+		gold = value
+		%Gold.text =  str(value)  
+
+func _ready() -> void:
+	Persistence.gain_bonus_stats(self)
 
 func _physics_process(delta):
 	if is_instance_valid(nearest_enemy):
@@ -64,7 +98,7 @@ func _physics_process(delta):
 
 	
 func take_damage(amount):
-	health -= max(amount - armor,0)
+	health -= max(amount - (armor/amount + armor),1)
  
  
 func _on_self_damage_body_entered(body):
@@ -89,3 +123,9 @@ func _on_timer_timeout() -> void:
 func _on_magnet_area_entered(area: Area2D) -> void:
 	if area.has_method("follow"):
 		area.follow(self)
+		
+func gain_gold(amount):
+	gold += amount
+	
+func open_chest():
+	$UI/Chest.open()

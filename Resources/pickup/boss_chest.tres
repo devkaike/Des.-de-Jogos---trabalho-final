@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Chest" load_steps=3 format=3 uid="uid://k0h8xgijwcpm"]
+
+[ext_resource type="Texture2D" uid="uid://cvmdnoq2v6ly0" path="res://assets/recourses/chest.png" id="1_vd6wu"]
+[ext_resource type="Script" path="res://scenes/chest_resource.gd" id="2_i0ef5"]
+
+[resource]
+script = ExtResource("2_i0ef5")
+title = "Bau de Boss"
+icon = ExtResource("1_vd6wu")
+description = ""

@@ -1,14 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtskxmbthlwkl"]
+[gd_scene load_steps=3 format=3 uid="uid://dtskxmbthlwkl"]
 
 [ext_resource type="Script" path="res://scripts/passive_slot.gd" id="1_8fpmh"]
+[ext_resource type="Texture2D" uid="uid://dhj7fm55qdhic" path="res://assets/recourses/GUI-06.png" id="2_0iur2"]
 
 [node name="PassiveSlot" type="PanelContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_8fpmh")
 
+[node name="Shape" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_0iur2")
+expand_mode = 1
+stretch_mode = 4
+
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
+texture = ExtResource("2_0iur2")
 expand_mode = 1
 stretch_mode = 4

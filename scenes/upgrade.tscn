@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmei6hu1k7ep7"]
+
+[ext_resource type="Script" path="res://scenes/upgrade_button.gd" id="1_dcgn1"]
+[ext_resource type="Texture2D" uid="uid://dhj7fm55qdhic" path="res://assets/recourses/GUI-06.png" id="2_42jyq"]
+
+[node name="Upgrade" type="Button"]
+offset_right = 40.0
+offset_bottom = 40.0
+toggle_mode = true
+script = ExtResource("1_dcgn1")
+
+[node name="Shape" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("2_42jyq")
+
+[node name="Item" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 55.0
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+mouse_filter = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
