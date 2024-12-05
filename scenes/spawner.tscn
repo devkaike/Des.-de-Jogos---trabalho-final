@@ -3,15 +3,15 @@
 [ext_resource type="Script" path="res://scripts/spawner.gd" id="1_o4c63"]
 [ext_resource type="PackedScene" uid="uid://70mrj8ythp2n" path="res://scenes/enemy.tscn" id="2_nk5yw"]
 [ext_resource type="Script" path="res://resources/EnemyType.gd" id="3_xshps"]
-[ext_resource type="Resource" uid="uid://dlbwmpq1os1ao" path="res://resources/enemy/cube.tres" id="4_67jk3"]
-[ext_resource type="Resource" uid="uid://tdu5xgm33tot" path="res://resources/enemy/eye.tres" id="5_fx6kq"]
-[ext_resource type="Resource" uid="uid://vng0ykf2oixg" path="res://resources/enemy/EyeLogs.tres" id="6_1876g"]
-[ext_resource type="Resource" uid="uid://bw1vco5ku2fqq" path="res://resources/enemy/triples.tres" id="7_3cyuv"]
+[ext_resource type="Resource" uid="uid://uetfbc5q7uq" path="res://resources/enemy/capybara.tres" id="4_oj5xu"]
+[ext_resource type="Resource" uid="uid://noaowxxj83b4" path="res://resources/enemy/cyberbara.tres" id="5_umesq"]
+[ext_resource type="Resource" uid="uid://dafdkppm2arc0" path="res://resources/enemy/cyberbara-canon.tres" id="6_3ftgb"]
+[ext_resource type="Resource" uid="uid://bgiibtl87pf2o" path="res://resources/enemy/cyberbara-rocket.tres" id="7_w0deb"]
 
 [node name="Spawner" type="Node2D"]
 script = ExtResource("1_o4c63")
 enemy = ExtResource("2_nk5yw")
-enemy_types = Array[ExtResource("3_xshps")]([ExtResource("4_67jk3"), ExtResource("5_fx6kq"), ExtResource("6_1876g"), ExtResource("7_3cyuv")])
+enemy_types = Array[ExtResource("3_xshps")]([ExtResource("4_oj5xu"), ExtResource("5_umesq"), ExtResource("6_3ftgb"), ExtResource("7_w0deb")])
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -39,7 +39,7 @@ text = "00"
 autostart = true
 
 [node name="Pattern" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 120.0
 autostart = true
 
 [node name="Elite" type="Timer" parent="."]

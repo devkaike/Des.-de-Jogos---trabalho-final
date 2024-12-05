@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dg27nyb4hwom8"]
+[gd_scene load_steps=36 format=3 uid="uid://dg27nyb4hwom8"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_dir11"]
 [ext_resource type="Texture2D" uid="uid://be0omn63mmrue" path="res://assets/recourses/coin.png" id="2_5b4v0"]
@@ -6,11 +6,13 @@
 [ext_resource type="Resource" uid="uid://fm2fcuxgc1a0" path="res://resources/waepons/magic_wand.tres" id="3_hr14q"]
 [ext_resource type="PackedScene" uid="uid://dtskxmbthlwkl" path="res://scenes/passive_slot.tscn" id="4_8er3u"]
 [ext_resource type="Script" path="res://scenes/options.gd" id="4_vql3h"]
-[ext_resource type="Resource" uid="uid://cuol77dwqabyw" path="res://resources/passive_items/orbe_poder.tres" id="5_wdfvl"]
 [ext_resource type="Texture2D" uid="uid://cvds7bsdrq0kg" path="res://assets/recourses/shape-bar.png" id="7_u3ucq"]
 [ext_resource type="Texture2D" uid="uid://dd1s1avqj2fkr" path="res://assets/recourses/xp.png" id="8_aouf8"]
 [ext_resource type="Script" path="res://scenes/chest.gd" id="8_qhogu"]
+[ext_resource type="Script" path="res://resources/weapon.gd" id="9_c7ipb"]
 [ext_resource type="Texture2D" uid="uid://rf8iff3h5j6b" path="res://assets/recourses/Fantasy RPG (Toony) 32x32.png" id="9_gn8so"]
+[ext_resource type="Script" path="res://resources/passive_item.gd" id="10_dwg10"]
+[ext_resource type="Resource" uid="uid://cuol77dwqabyw" path="res://resources/passive_items/orbe_poder.tres" id="10_fyou0"]
 [ext_resource type="Script" path="res://scenes/back.gd" id="10_vc6sh"]
 [ext_resource type="Texture2D" uid="uid://c2cqwnv5xkf1y" path="res://assets/recourses/GUI-01.png" id="10_vr7kc"]
 
@@ -212,7 +214,6 @@ offset_bottom = 114.0
 
 [node name="PassiveSlot" parent="UI/PassiveItems" instance=ExtResource("4_8er3u")]
 layout_mode = 2
-item = ExtResource("5_wdfvl")
 
 [node name="PassiveSlot2" parent="UI/PassiveItems" instance=ExtResource("4_8er3u")]
 layout_mode = 2
@@ -256,6 +257,8 @@ grow_vertical = 2
 script = ExtResource("4_vql3h")
 weapons = NodePath("../Waepons")
 passive_items = NodePath("../PassiveItems")
+avaliable_weapons = Array[ExtResource("9_c7ipb")]([ExtResource("3_hr14q")])
+avaliable_passive_item = Array[ExtResource("10_dwg10")]([ExtResource("10_fyou0")])
 
 [node name="Chest" type="NinePatchRect" parent="UI"]
 process_mode = 3

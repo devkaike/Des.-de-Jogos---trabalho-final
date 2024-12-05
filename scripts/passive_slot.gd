@@ -1,5 +1,6 @@
 extends PanelContainer
- 
+class_name PassiveSlot 
+
 @export var item : PassiveItem:
 	set(value):
 		item = value

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://70mrj8ythp2n"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_7u63p"]
-[ext_resource type="Texture2D" uid="uid://cmgh0voj7jldm" path="res://assets/RPG Battlers 3/1 v1.png" id="2_lvilr"]
+[ext_resource type="Texture2D" uid="uid://cgyfuoarmdt4b" path="res://assets/enemy/capybara.png" id="2_nye3k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_256qp"]
 radius = 15.0333
@@ -12,8 +12,8 @@ collision_mask = 2
 script = ExtResource("1_7u63p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1, 0)
-texture = ExtResource("2_lvilr")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_nye3k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_256qp")

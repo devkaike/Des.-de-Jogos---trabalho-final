@@ -1,5 +1,6 @@
 extends PanelContainer
-
+class_name WeaponSlot
+ 
 @export var item: Weapon:
 	set(value):
 		item = value

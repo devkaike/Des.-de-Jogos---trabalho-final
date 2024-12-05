@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Gold" load_steps=3 format=3 uid="uid://ex8st184ebks"]
 
 [ext_resource type="Script" path="res://scenes/gold.gd" id="1_y2ayg"]
-[ext_resource type="Texture2D" uid="uid://xa1shayweekx" path="res://assets/TopDownFantasy-Forest/Mockup1.png" id="2_wcimi"]
+[ext_resource type="Texture2D" uid="uid://be0omn63mmrue" path="res://assets/recourses/coin.png" id="2_7i48a"]
 
 [resource]
 script = ExtResource("1_y2ayg")
 gold = 5
-title = "Gold"
-texture = ExtResource("2_wcimi")
+title = "Dinheiro"
+texture = ExtResource("2_7i48a")
