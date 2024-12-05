@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://uetfbc5q7uq"]
+
+[ext_resource type="Script" path="res://resources/pickup_resource.gd" id="1_7b2u5"]
+[ext_resource type="Resource" uid="uid://6vegkb12ebbc" path="res://resources/pickup/blue_gem.tres" id="2_5db5w"]
+[ext_resource type="Script" path="res://resources/EnemyType.gd" id="3_vyk6v"]
+[ext_resource type="Texture2D" uid="uid://cgyfuoarmdt4b" path="res://assets/enemy/capybara.png" id="4_v4f6v"]
+
+[resource]
+script = ExtResource("3_vyk6v")
+title = "Capybara"
+texture = ExtResource("4_v4f6v")
+health = 2.0
+damage = 1.0
+drops = Array[ExtResource("1_7b2u5")]([ExtResource("2_5db5w")])

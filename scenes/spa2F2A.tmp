@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://cw3jpck5mkf8d"]
+
+[ext_resource type="Script" path="res://scripts/spawner.gd" id="1_o4c63"]
+[ext_resource type="PackedScene" uid="uid://70mrj8ythp2n" path="res://scenes/enemy.tscn" id="2_nk5yw"]
+[ext_resource type="Script" path="res://resources/EnemyType.gd" id="3_xshps"]
+[ext_resource type="Resource" uid="uid://uetfbc5q7uq" path="res://resources/enemy/capybara.tres" id="4_oj5xu"]
+[ext_resource type="Resource" uid="uid://noaowxxj83b4" path="res://resources/enemy/cyberbara.tres" id="5_umesq"]
+[ext_resource type="Resource" uid="uid://dafdkppm2arc0" path="res://resources/enemy/cyberbara-canon.tres" id="6_3ftgb"]
+[ext_resource type="Resource" uid="uid://bgiibtl87pf2o" path="res://resources/enemy/cyberbara-rocket.tres" id="7_w0deb"]
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource("1_o4c63")
+enemy = ExtResource("2_nk5yw")
+enemy_types = Array[ExtResource("3_xshps")]([ExtResource("4_oj5xu"), ExtResource("5_umesq"), ExtResource("6_3ftgb"), ExtResource("7_w0deb")])
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+offset_left = 1016.0
+offset_top = 60.0
+offset_right = 1058.0
+offset_bottom = 100.0
+
+[node name="Minute" type="Label" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="Label2" type="Label" parent="UI/HBoxContainer"]
+layout_mode = 2
+text = ":"
+
+[node name="Second" type="Label" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Pattern" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="Elite" type="Timer" parent="."]
+wait_time = 9.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Pattern" to="." method="_on_pattern_timeout"]
+[connection signal="timeout" from="Elite" to="." method="_on_elite_timeout"]

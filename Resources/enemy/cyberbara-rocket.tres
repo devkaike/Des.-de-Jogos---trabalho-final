@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://bgiibtl87pf2o"]
+
+[ext_resource type="Script" path="res://resources/pickup_resource.gd" id="1_3qr5y"]
+[ext_resource type="Resource" uid="uid://6vegkb12ebbc" path="res://resources/pickup/blue_gem.tres" id="2_xq3aj"]
+[ext_resource type="Script" path="res://resources/EnemyType.gd" id="3_wrx55"]
+[ext_resource type="Texture2D" uid="uid://cwrklvj0abrw4" path="res://assets/enemy/cyberbara-rocket.png" id="4_r4vxt"]
+
+[resource]
+script = ExtResource("3_wrx55")
+title = "cyberbara-rocket"
+texture = ExtResource("4_r4vxt")
+health = 15.0
+damage = 10.0
+drops = Array[ExtResource("1_3qr5y")]([ExtResource("2_xq3aj")])
