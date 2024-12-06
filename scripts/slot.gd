@@ -1,6 +1,6 @@
 extends PanelContainer
-class_name WeaponSlot
- 
+var player: CharacterBody2D 
+
 @export var item: Weapon:
 	set(value):
 		item = value
@@ -11,4 +11,7 @@ class_name WeaponSlot
 func _on_cooldown_timeout() -> void:
 	if item:
 		$Cooldown.wait_time = item.cooldown
-		item.activate(owner,owner.nearest_enemy, get_tree())
+		if(player):
+			item.activate(player,player.nearest_enemy, get_tree())
+		else:
+			item.activate(owner,owner.nearest_enemy, get_tree())

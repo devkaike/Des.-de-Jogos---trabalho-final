@@ -11,8 +11,11 @@ func shoot(source, target, scene_tree):
 	projectile.damage = damage
 	projectile.speed = speed
 	projectile.source = source
+	projectile.size = size
+	projectile.ignore_colision = ignore_colision
 	projectile.direction = (target.position - source.position).normalized()
- 
+	if(projectile_sprite):
+		projectile.sprite = projectile_sprite
 	scene_tree.current_scene.add_child(projectile)
  
 func activate(source, target, scene_tree):
@@ -30,5 +33,6 @@ func upgrade_item():
 	damage += upgrade.damage
 	cooldown += upgrade.cooldown
 	speed += upgrade.speed
+	size += upgrade.size
 	
 	level += 1

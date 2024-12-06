@@ -35,7 +35,7 @@ func spawn(pos : Vector2, elite : bool = false):
 		#return
  
 	var enemy_instance = enemy.instantiate()
-	var min_value_pick = min(minute, enemy_types.size() -1);
+	var min_value_pick = min(minute/2, enemy_types.size() -1);
 	var enemy_type = enemy_types.slice(0,min_value_pick + 1).pick_random()
 	enemy_instance.type = enemy_type
 	#enemy_instance.position = get_random_position()
@@ -56,7 +56,7 @@ func get_random_position() -> Vector2:
  
  
 func amount(number : int = 1):
-	for i in range(minute + (number * .5)):
+	for i in range(minute + (number * .4)):
 		spawn(get_random_position())
  
  

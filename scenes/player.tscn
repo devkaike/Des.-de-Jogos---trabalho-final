@@ -1,20 +1,24 @@
-[gd_scene load_steps=36 format=3 uid="uid://dg27nyb4hwom8"]
+[gd_scene load_steps=39 format=3 uid="uid://dg27nyb4hwom8"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_dir11"]
 [ext_resource type="Texture2D" uid="uid://be0omn63mmrue" path="res://assets/recourses/coin.png" id="2_5b4v0"]
 [ext_resource type="PackedScene" uid="uid://cc2mnr7uonkq4" path="res://scenes/slot.tscn" id="2_p4y0e"]
-[ext_resource type="Resource" uid="uid://fm2fcuxgc1a0" path="res://resources/waepons/magic_wand.tres" id="3_hr14q"]
-[ext_resource type="PackedScene" uid="uid://dtskxmbthlwkl" path="res://scenes/passive_slot.tscn" id="4_8er3u"]
+[ext_resource type="Resource" uid="uid://b7x80msc0mp0v" path="res://resources/waepons/metralhadora.tres" id="4_scumo"]
 [ext_resource type="Script" path="res://scenes/options.gd" id="4_vql3h"]
+[ext_resource type="Resource" uid="uid://dhjeon1t511x1" path="res://resources/waepons/shotgun.tres" id="4_y8xe1"]
+[ext_resource type="Texture2D" uid="uid://cm0unbhxqfugu" path="res://assets/recourses/xp-bar.png" id="7_1utpm"]
 [ext_resource type="Texture2D" uid="uid://cvds7bsdrq0kg" path="res://assets/recourses/shape-bar.png" id="7_u3ucq"]
-[ext_resource type="Texture2D" uid="uid://dd1s1avqj2fkr" path="res://assets/recourses/xp.png" id="8_aouf8"]
 [ext_resource type="Script" path="res://scenes/chest.gd" id="8_qhogu"]
 [ext_resource type="Script" path="res://resources/weapon.gd" id="9_c7ipb"]
 [ext_resource type="Texture2D" uid="uid://rf8iff3h5j6b" path="res://assets/recourses/Fantasy RPG (Toony) 32x32.png" id="9_gn8so"]
 [ext_resource type="Script" path="res://resources/passive_item.gd" id="10_dwg10"]
-[ext_resource type="Resource" uid="uid://cuol77dwqabyw" path="res://resources/passive_items/orbe_poder.tres" id="10_fyou0"]
 [ext_resource type="Script" path="res://scenes/back.gd" id="10_vc6sh"]
 [ext_resource type="Texture2D" uid="uid://c2cqwnv5xkf1y" path="res://assets/recourses/GUI-01.png" id="10_vr7kc"]
+[ext_resource type="Resource" uid="uid://llrb4qkfqmja" path="res://resources/waepons/rifle.tres" id="14_5c1dq"]
+[ext_resource type="Resource" uid="uid://yg7y5u7h5bl2" path="res://resources/passive_items/colete.tres" id="15_jqwjw"]
+[ext_resource type="Texture2D" uid="uid://bnd0khq4cg17t" path="res://assets/character/jackson.png" id="16_2xwux"]
+[ext_resource type="Resource" uid="uid://b6gtdmughvlcd" path="res://resources/passive_items/municao.tres" id="16_v32me"]
+[ext_resource type="Resource" uid="uid://dm4lqnkyx56pp" path="res://resources/passive_items/super-kit.tres" id="17_j5kqw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3525g"]
 atlas = ExtResource("9_gn8so")
@@ -124,12 +128,11 @@ animations = [{
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ceq7u"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_lo0e2"]
-size = Vector2(20, 20)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fekws"]
+size = Vector2(34, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2l15"]
+size = Vector2(34, 43)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x0nwu"]
 radius = 50.0
@@ -144,6 +147,7 @@ offset_left = 8.0
 offset_top = 117.0
 offset_right = 48.0
 offset_bottom = 302.0
+scale = Vector2(1e-05, 1e-05)
 
 [node name="MaxHealthDebug" type="Label" parent="UI/Debug"]
 unique_name_in_owner = true
@@ -198,28 +202,13 @@ offset_bottom = 70.0
 
 [node name="Slot" parent="UI/Waepons" instance=ExtResource("2_p4y0e")]
 layout_mode = 2
-item = ExtResource("3_hr14q")
-
-[node name="Slot2" parent="UI/Waepons" instance=ExtResource("2_p4y0e")]
-layout_mode = 2
-
-[node name="Slot3" parent="UI/Waepons" instance=ExtResource("2_p4y0e")]
-layout_mode = 2
+item = ExtResource("14_5c1dq")
 
 [node name="PassiveItems" type="HBoxContainer" parent="UI"]
 offset_left = 6.0
 offset_top = 74.0
 offset_right = 134.0
 offset_bottom = 114.0
-
-[node name="PassiveSlot" parent="UI/PassiveItems" instance=ExtResource("4_8er3u")]
-layout_mode = 2
-
-[node name="PassiveSlot2" parent="UI/PassiveItems" instance=ExtResource("4_8er3u")]
-layout_mode = 2
-
-[node name="PassiveSlot3" parent="UI/PassiveItems" instance=ExtResource("4_8er3u")]
-layout_mode = 2
 
 [node name="XP" type="TextureProgressBar" parent="UI"]
 unique_name_in_owner = true
@@ -229,7 +218,7 @@ offset_bottom = 27.0
 max_value = 10.0
 nine_patch_stretch = true
 texture_under = ExtResource("7_u3ucq")
-texture_progress = ExtResource("8_aouf8")
+texture_progress = ExtResource("7_1utpm")
 
 [node name="Level" type="Label" parent="UI/XP"]
 unique_name_in_owner = true
@@ -239,26 +228,6 @@ offset_top = 33.0
 offset_right = 1150.0
 offset_bottom = 56.0
 text = "Lv 1 "
-
-[node name="Options" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons", "passive_items")]
-unique_name_in_owner = true
-process_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("4_vql3h")
-weapons = NodePath("../Waepons")
-passive_items = NodePath("../PassiveItems")
-avaliable_weapons = Array[ExtResource("9_c7ipb")]([ExtResource("3_hr14q")])
-avaliable_passive_item = Array[ExtResource("10_dwg10")]([ExtResource("10_fyou0")])
 
 [node name="Chest" type="NinePatchRect" parent="UI"]
 process_mode = 3
@@ -390,10 +359,33 @@ grow_vertical = 2
 text = "Voltar para o Menu"
 script = ExtResource("10_vc6sh")
 
+[node name="Options" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons", "passive_items")]
+unique_name_in_owner = true
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("4_vql3h")
+weapons = NodePath("../Waepons")
+passive_items = NodePath("../PassiveItems")
+avaliable_weapons = Array[ExtResource("9_c7ipb")]([ExtResource("4_scumo"), ExtResource("14_5c1dq"), ExtResource("4_y8xe1")])
+avaliable_passive_item = Array[ExtResource("10_dwg10")]([ExtResource("15_jqwjw"), ExtResource("16_v32me"), ExtResource("17_j5kqw")])
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_lo0e2")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("16_2xwux")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 0)
 shape = SubResource("RectangleShape2D_fekws")
 
 [node name="SelfDamage" type="Area2D" parent="."]
@@ -402,16 +394,17 @@ collision_mask = 2
 
 [node name="Collision" type="CollisionShape2D" parent="SelfDamage"]
 unique_name_in_owner = true
+position = Vector2(-6, -0.5)
 shape = SubResource("RectangleShape2D_f2l15")
 
 [node name="Health" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 modulate = Color(1, 0.14, 0.14, 1)
 self_modulate = Color(1, 0.141176, 0.141176, 1)
-offset_left = -10.0
-offset_top = -15.0
-offset_right = 10.0
-offset_bottom = -11.0
+offset_left = -17.0
+offset_top = -28.0
+offset_right = 17.0
+offset_bottom = -24.0
 value = 100.0
 show_percentage = false
 

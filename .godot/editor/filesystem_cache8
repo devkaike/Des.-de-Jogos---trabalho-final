@@ -1,17 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1733439178
+::res://::1733461083
 icon.svg::CompressedTexture2D::8300340452539374078::1732477484::1732477502::1::::<><>::
-::res://assets/::1733368821
+multipleShot.gd::GDScript::-1::1733461083::0::1::::MultipleShot<>Weapon<>::
+::res://assets/::1733457590
 ::res://assets/backgrounds/::1733265689
 gold.webp::CompressedTexture2D::2525713314509234332::1733265683::1733265689::1::::<><>::
-::res://assets/character/::1732502193
-character.png::CompressedTexture2D::8011496353565589093::1732481459::1732481460::1::::<><>::
+::res://assets/character/::1733460765
+jackson.png::CompressedTexture2D::3306604960708800555::1733451611::1733451612::1::::<><>::
 ::res://assets/enemy/::1733369231
 capybara.png::CompressedTexture2D::5243859532269242399::1733369231::1733369231::1::::<><>::
 cyberbara-canon.png::CompressedTexture2D::547003124060920454::1733369231::1733369231::1::::<><>::
 cyberbara-rocket.png::CompressedTexture2D::6352718280932087349::1733369231::1733369231::1::::<><>::
 cyberbara.png::CompressedTexture2D::1975848941986144815::1733369231::1733369231::1::::<><>::
-::res://assets/recourses/::1733280742
+::res://assets/passive/::1733457658
+colete.png::CompressedTexture2D::5809713455682983663::1733457597::1733457658::1::::<><>::
+monicao-pesada.png::CompressedTexture2D::2987985343371203839::1733457597::1733457598::1::::<><>::
+super-kit.png::CompressedTexture2D::2209304828607174019::1733457597::1733457598::1::::<><>::
+::res://assets/recourses/::1733461197
+capa.png::CompressedTexture2D::2169115967802003607::1733459407::1733459407::1::::<><>::
 chest.png::CompressedTexture2D::6271785744432486685::1733268058::1733268058::1::::<><>::
 coin.png::CompressedTexture2D::2719657701503522896::1733279561::1733279562::1::::<><>::
 Fantasy RPG (Toony) 32x32.png::CompressedTexture2D::1205550449352891491::1733268111::1733268112::1::::<><>::
@@ -23,8 +29,11 @@ GUI-05.png::CompressedTexture2D::512349839776184574::1733279561::1733279562::1::
 GUI-06.png::CompressedTexture2D::7671115907079023750::1733280145::1733280146::1::::<><>::
 GUI-07.png::CompressedTexture2D::6038259510741358601::1733279561::1733279562::1::::<><>::
 health.png::CompressedTexture2D::282004679749317109::1733279561::1733279562::1::::<><>::
+hyper-xp.png::CompressedTexture2D::6101586080899691108::1733461196::1733461197::1::::<><>::
 shape-bar.png::CompressedTexture2D::6254150348811326254::1733280538::1733279562::1::::<><>::
-xp.png::CompressedTexture2D::7424641773291232033::1733280742::1733280742::1::::<><>::
+super-xp.png::CompressedTexture2D::2236361062487421949::1733461196::1733461197::1::::<><>::
+xp-bar.png::CompressedTexture2D::5667954554473775096::1733452316::1733452317::1::::<><>::
+xp.png::CompressedTexture2D::7424641773291232033::1733451938::1733451939::1::::<><>::
 ::res://assets/RPG Battlers 3/::1733278466
 1 v1.png::CompressedTexture2D::5627964546433600006::1732481457::1732481460::1::::<><>::
 1 v2.png::CompressedTexture2D::4858341185958876632::1732481458::1732481461::1::::<><>::
@@ -90,44 +99,57 @@ GUI-game.png::CompressedTexture2D::2338680204595272682::1733278501::1733278502::
 ::res://assets/TopDownFantasy-Forest/Tiles/::1732502194
 Tileset1xPadding.png::CompressedTexture2D::2815379410927308920::1732481459::1732481460::1::::<><>::
 Tileset.png::CompressedTexture2D::3808380975275184580::1732481459::1732481460::1::::<><>::
-::res://assets/waepons/::1732502194
+::res://assets/waepons/::1733461369
 magic-wand.png::CompressedTexture2D::3574272135116379977::1732500487::1732500487::1::::<><>::
+metralhadora-shot.png::CompressedTexture2D::8845956908513596804::1733461369::1733461369::1::::<><>::
+metralhadora.png::CompressedTexture2D::2639713844002393473::1733452475::1733452476::1::::<><>::
+rifle-shot.png::CompressedTexture2D::4925876067497998890::1733461369::1733461369::1::::<><>::
+rifle.png::CompressedTexture2D::4252486008304561836::1733452475::1733452476::1::::<><>::
+shotgun-shot.png::CompressedTexture2D::8917231362819442610::1733461369::1733461369::1::::<><>::
+shotgun.png::CompressedTexture2D::6107932043957979871::1733452482::1733452482::1::::<><>::
 ::res://material/::1732502194
 rainbow.tres::ShaderMaterial::4525265869274613862::1732483364::0::1::::<><>::res://shaders/rainbow_outline.gdshader
-::res://resources/::1733270008
+::res://resources/::1733461064
 Cube.tres::Resource/Enemy::6324892369392379356::1732583168::0::1::::<><>::res://scenes/EnemyType.gd<>uid://d0sabjxg86bg5::::res://RPG Battlers/2 v1.png
 EnemyType.gd::GDScript::-1::1732587727::0::1::::Enemy<>Resource<>::
 Eye.tres::Resource/Enemy::7594206968145241412::1732583168::0::1::::<><>::res://scenes/EnemyType.gd<>uid://djqoae6vmtike::::res://RPG Battlers/1 v1.png
 EyeGhost.tres::Resource/Enemy::3379367333333280601::1732583168::0::1::::<><>::res://scenes/EnemyType.gd<>uid://clkp8esasud43::::res://RPG Battlers/5 v1.png
 EyeLegs.tres::Resource/Enemy::451867036897361077::1732583168::0::1::::<><>::res://scenes/EnemyType.gd<>uid://65pjk84dxh5b::::res://RPG Battlers/3 v1.png
-item.gd::GDScript::-1::1733267383::0::1::::Item<>Resource<>::
-passive_item.gd::GDScript::-1::1732761644::0::1::::PassiveItem<>Item<>::
+item.gd::GDScript::-1::1733457239::0::1::::Item<>Resource<>::
+passive_item.gd::GDScript::-1::1733454741::0::1::::PassiveItem<>Item<>::
 pickup_resource.gd::GDScript::-1::1732585611::0::1::::Pickups<>Resource<>::
-projectile_upgrade.gd::GDScript::-1::1732589859::0::1::::ProjectileUpgrade<>Upgrade<>::
-single_shot.gd::GDScript::-1::1732762117::0::1::::SingleShot<>Weapon<>::
+projectile_upgrade.gd::GDScript::-1::1733458596::0::1::::ProjectileUpgrade<>Upgrade<>::
+single_shot.gd::GDScript::-1::1733461064::0::1::::SingleShot<>Weapon<>::
 skill.gd::GDScript::-1::1733270008::0::1::::Skill<>Resource<>::
 stats.gd::GDScript::-1::1732758341::0::1::::Stats<>Resource<>::
 Triple.tres::Resource/Enemy::160439777502095205::1732583168::0::1::::<><>::res://scenes/EnemyType.gd<>uid://co04i84ho04ec::::res://RPG Battlers/4 v1.png
 update.gd::GDScript::-1::1732589799::0::1::::Upgrade<>Resource<>::
-weapon.gd::GDScript::-1::1732762083::0::1::::Weapon<>Item<>::
-::res://resources/enemy/::1733371973
-capybara.tres::Resource/Enemy::41564617429637016::1733371973::0::1::::<><>::res://resources/pickup_resource.gd<>uid://6vegkb12ebbc::::res://resources/pickup/blue_gem.tres<>res://resources/EnemyType.gd<>uid://cgyfuoarmdt4b::::res://assets/enemy/capybara.png
-cyberbara-canon.tres::Resource/Enemy::7169784760370594705::1733371973::0::1::::<><>::res://resources/pickup_resource.gd<>uid://6vegkb12ebbc::::res://resources/pickup/blue_gem.tres<>res://resources/EnemyType.gd<>uid://h18cdetuts5k::::res://assets/enemy/cyberbara-canon.png
-cyberbara-rocket.tres::Resource/Enemy::2824557305769039504::1733369906::0::1::::<><>::res://resources/pickup_resource.gd<>uid://6vegkb12ebbc::::res://resources/pickup/blue_gem.tres<>res://resources/EnemyType.gd<>uid://cwrklvj0abrw4::::res://assets/enemy/cyberbara-rocket.png
-cyberbara.tres::Resource/Enemy::941382449068502375::1733371973::0::1::::<><>::res://resources/pickup_resource.gd<>uid://6vegkb12ebbc::::res://resources/pickup/blue_gem.tres<>res://resources/EnemyType.gd<>uid://3fd7ctmskxe2::::res://assets/enemy/cyberbara.png
+weapon.gd::GDScript::-1::1733461002::0::1::::Weapon<>Item<>::
+::res://resources/enemy/::1733452209
+capybara.tres::Resource/Enemy::41564617429637016::1733452190::0::1::::<><>::res://resources/pickup_resource.gd<>uid://m14jeurethre::::res://resources/pickup/capsula_xp.tres<>res://resources/EnemyType.gd<>uid://cgyfuoarmdt4b::::res://assets/enemy/capybara.png
+cyberbara-canon.tres::Resource/Enemy::7169784760370594705::1733452186::0::1::::<><>::res://resources/pickup_resource.gd<>uid://m14jeurethre::::res://resources/pickup/capsula_xp.tres<>res://resources/EnemyType.gd<>uid://h18cdetuts5k::::res://assets/enemy/cyberbara-canon.png
+cyberbara-rocket.tres::Resource/Enemy::2824557305769039504::1733452199::0::1::::<><>::res://resources/pickup_resource.gd<>uid://m14jeurethre::::res://resources/pickup/capsula_xp.tres<>res://resources/EnemyType.gd<>uid://cwrklvj0abrw4::::res://assets/enemy/cyberbara-rocket.png
+cyberbara.tres::Resource/Enemy::941382449068502375::1733452209::0::1::::<><>::res://resources/pickup_resource.gd<>uid://m14jeurethre::::res://resources/pickup/capsula_xp.tres<>res://resources/EnemyType.gd<>uid://3fd7ctmskxe2::::res://assets/enemy/cyberbara.png
 ::res://resources/gold/::1733284480
 gold.tres::Resource/Gold::330272907593934842::1733284480::0::1::::<><>::res://scenes/gold.gd<>uid://be0omn63mmrue::::res://assets/recourses/coin.png
-::res://resources/passive_items/::1733374813
-orbe_magnetica.tres::Resource/PassiveItem::7298657455608925864::1733373538::0::1::::<><>::res://resources/passive_item.gd<>uid://ck4mmnmhqn5j7::::res://assets/RPG Battlers 3/9 v2.png<>res://resources/stats.gd
-orbe_poder.tres::Resource/PassiveItem::6206246247431654986::1733374813::0::1::::<><>::res://resources/passive_item.gd<>uid://cg3c6mj6u8oi8::::res://assets/RPG Battlers 3/10 v1.png<>res://resources/stats.gd
-::res://resources/pickup/::1733284027
-blue_gem.tres::Resource/Gem::2219460196344620792::1732586673::0::1::::<><>::uid://cxa88miqu2jqb::::res://assets/RPG Battlers 3/15 v1.png<>res://resources/pickup/gem.gd
+::res://resources/passive_items/::1733458799
+colete.tres::Resource/PassiveItem::1698905924720441461::1733457797::0::1::::<><>::res://resources/passive_item.gd<>uid://co1jeqmqhrkcl::::res://assets/passive/colete.png<>res://resources/stats.gd
+municao.tres::Resource/PassiveItem::4575820744699836235::1733457954::0::1::::<><>::res://resources/passive_item.gd<>uid://bitnxgpq6jo7p::::res://assets/passive/monicao-pesada.png<>res://resources/stats.gd
+orbe_magnetica.tres::Resource/PassiveItem::7298657455608925864::1733455661::0::1::::<><>::res://resources/passive_item.gd<>uid://ck4mmnmhqn5j7::::res://assets/RPG Battlers 3/9 v2.png<>res://resources/stats.gd
+orbe_poder.tres::Resource/PassiveItem::6206246247431654986::1733440021::0::1::::<><>::res://resources/passive_item.gd<>uid://cg3c6mj6u8oi8::::res://assets/RPG Battlers 3/10 v1.png<>res://resources/stats.gd
+super-kit.tres::Resource/PassiveItem::8062092288600332137::1733458125::0::1::::<><>::res://resources/passive_item.gd<>uid://6qg6sqbjxuj0::::res://assets/passive/super-kit.png<>res://resources/stats.gd
+::res://resources/pickup/::1733455507
+blue_gem.tres::Resource/Gem::2219460196344620792::1733455507::0::1::::<><>::uid://cxa88miqu2jqb::::res://assets/RPG Battlers 3/15 v1.png<>res://resources/pickup/gem.gd
 boss_chest.tres::Resource/Chest::753983048062302802::1733284027::0::1::::<><>::uid://cvmdnoq2v6ly0::::res://assets/recourses/chest.png<>res://scenes/chest_resource.gd
+capsula_xp.tres::Resource/Gem::897717051965306202::1733452149::0::1::::<><>::uid://dd1s1avqj2fkr::::res://assets/recourses/xp.png<>res://resources/pickup/gem.gd
 gem.gd::GDScript::-1::1732587598::0::1::::Gem<>Pickups<>::
-::res://resources/waepons/::1733368957
+::res://resources/waepons/::1733461126
 goly_wand_2.tres::Resource/SingleShot::311019288735318442::1732762466::0::1::::<><>::uid://bq72l6ses06lq::::res://scenes/projectile.tscn<>res://resources/single_shot.gd<>uid://c2jliucn16vjh::::res://assets/RPG Battlers 3/11 v1.png<>res://resources/update.gd
 holy_wand.tres::Resource/Weapon::5164139342407406419::1732762307::0::1::::<><>::uid://bq72l6ses06lq::::res://scenes/projectile.tscn<>res://resources/weapon.gd<>uid://c2jliucn16vjh::::res://assets/RPG Battlers 3/11 v1.png<>res://resources/update.gd
-magic_wand.tres::Resource/SingleShot::377365176009028305::1733368957::0::1::::<><>::uid://bq72l6ses06lq::::res://scenes/projectile.tscn<>uid://eowpbh85md83::::res://resources/waepons/goly_wand_2.tres<>res://resources/single_shot.gd<>uid://cuol77dwqabyw::::res://resources/passive_items/orbe_poder.tres<>uid://bq6n0fjmpbsrh::::res://assets/waepons/magic-wand.png<>res://resources/update.gd<>res://resources/projectile_upgrade.gd
+magic_wand.tres::Resource/SingleShot::377365176009028305::1733455258::0::1::::<><>::uid://bq72l6ses06lq::::res://scenes/projectile.tscn<>uid://eowpbh85md83::::res://resources/waepons/goly_wand_2.tres<>res://resources/single_shot.gd<>uid://cuol77dwqabyw::::res://resources/passive_items/orbe_poder.tres<>uid://bq6n0fjmpbsrh::::res://assets/waepons/magic-wand.png<>res://resources/update.gd<>res://resources/projectile_upgrade.gd
+metralhadora.tres::Resource/SingleShot::4681993332273878227::1733459831::0::1::::<><>::uid://bq72l6ses06lq::::res://scenes/projectile.tscn<>res://resources/single_shot.gd<>uid://bduxx30u3nght::::res://assets/waepons/metralhadora.png<>res://resources/update.gd<>res://resources/projectile_upgrade.gd
+rifle.tres::Resource/SingleShot::795820958339652338::1733461126::0::1::::<><>::uid://bq72l6ses06lq::::res://scenes/projectile.tscn<>res://resources/single_shot.gd<>uid://cgyfuoarmdt4b::::res://assets/enemy/capybara.png<>uid://b1t628xpbjlai::::res://assets/waepons/rifle.png<>res://resources/update.gd<>res://resources/projectile_upgrade.gd
+shotgun.tres::Resource/MultipleShot::7669431949290684832::1733459831::0::1::::<><>::uid://bq72l6ses06lq::::res://scenes/projectile.tscn<>res://multipleShot.gd<>uid://ctay0peqn88wx::::res://assets/waepons/shotgun.png<>res://resources/update.gd<>res://resources/projectile_upgrade.gd
 ::res://RPG Battlers/::1732584230
 1 v1.png::CompressedTexture2D::7824841984738555312::1732583168::1732584229::1::::<><>::
 1 v2.png::CompressedTexture2D::2868097435374661870::1732583168::1732584229::1::::<><>::
@@ -182,43 +204,43 @@ magic_wand.tres::Resource/SingleShot::377365176009028305::1733368957::0::1::::<>
 All x2.png::CompressedTexture2D::8218324767512507425::1732583168::1732584230::1::::<><>::
 All x3.png::CompressedTexture2D::8504376015834881453::1732583168::1732584230::1::::<><>::
 All.png::CompressedTexture2D::1509650484935142542::1732583168::1732584229::1::::<><>::
-::res://scenes/::1733375945
+::res://scenes/::1733461130
 back.gd::GDScript::-1::1733273221::0::1::::<>Button<>::
 chest.gd::GDScript::-1::1733269091::0::1::::<>NinePatchRect<>::
 chest_resource.gd::GDScript::-1::1733267917::0::1::::Chest<>Pickups<>::
-damage.tscn::PackedScene::4254150126142584961::1733375941::0::1::::<><>::res://scripts/damage.gd
-enemy.tscn::PackedScene::2298411927482942471::1733375942::0::1::::<><>::res://scripts/enemy.gd<>uid://cgyfuoarmdt4b::::res://assets/enemy/capybara.png
+damage.tscn::PackedScene::4254150126142584961::1733461126::0::1::::<><>::res://scripts/damage.gd
+enemy.tscn::PackedScene::2298411927482942471::1733461126::0::1::::<><>::res://scripts/enemy.gd<>uid://cgyfuoarmdt4b::::res://assets/enemy/capybara.png
 gold.gd::GDScript::-1::1733267340::0::1::::Gold<>Item<>::
 main_menu.gd::GDScript::-1::1733283287::0::1::::<>Control<>::
-main_menu.tscn::PackedScene::400687722936433049::1733375943::0::1::::<><>::res://scenes/skill_tree.gd<>res://scenes/main_menu.gd<>uid://bmei6hu1k7ep7::::res://scenes/upgrade.tscn<>res://resources/skill.gd<>res://resources/stats.gd<>uid://c2jliucn16vjh::::res://assets/RPG Battlers 3/11 v1.png<>res://scenes/UI_Gold.gd<>uid://cyxucy3ieratd::::res://assets/RPG Battlers 3/11 v2.png<>uid://p5mhry3gf5bq::::res://assets/RPG Battlers 3/11.png<>res://scenes/start.gd<>uid://ms4p3ac5fxel::::res://assets/recourses/GUI-03.png<>res://scenes/upgrades.gd<>uid://be0omn63mmrue::::res://assets/recourses/coin.png
-options.gd::GDScript::-1::1733375934::0::1::::<>VBoxContainer<>::
-option_slot.gd::GDScript::-1::1733284358::0::1::::<>Button<>::
-option_slot.tscn::PackedScene::539456770677120910::1733375942::0::1::::<><>::uid://bq6n0fjmpbsrh::::res://assets/waepons/magic-wand.png<>res://scenes/option_slot.gd<>uid://calpo341go812::::res://assets/recourses/GUI-02.png<>uid://dhj7fm55qdhic::::res://assets/recourses/GUI-06.png
-passive_slot.tscn::PackedScene::8530657755660563359::1733375942::0::1::::<><>::res://scripts/passive_slot.gd<>uid://dhj7fm55qdhic::::res://assets/recourses/GUI-06.png
+main_menu.tscn::PackedScene::400687722936433049::1733461127::0::1::::<><>::res://scenes/skill_tree.gd<>res://scenes/main_menu.gd<>uid://bmei6hu1k7ep7::::res://scenes/upgrade.tscn<>res://resources/skill.gd<>res://resources/stats.gd<>res://scenes/UI_Gold.gd<>uid://bitnxgpq6jo7p::::res://assets/passive/monicao-pesada.png<>uid://co1jeqmqhrkcl::::res://assets/passive/colete.png<>res://scenes/start.gd<>uid://ms4p3ac5fxel::::res://assets/recourses/GUI-03.png<>uid://6qg6sqbjxuj0::::res://assets/passive/super-kit.png<>res://scenes/upgrades.gd<>uid://550a1xb2ykp8::::res://assets/recourses/capa.png<>uid://be0omn63mmrue::::res://assets/recourses/coin.png
+options.gd::GDScript::-1::1733455594::0::1::::<>VBoxContainer<>::
+option_slot.gd::GDScript::-1::1733456920::0::1::::<>Button<>::
+option_slot.tscn::PackedScene::539456770677120910::1733461126::0::1::::<><>::uid://bq6n0fjmpbsrh::::res://assets/waepons/magic-wand.png<>res://scenes/option_slot.gd<>uid://calpo341go812::::res://assets/recourses/GUI-02.png<>uid://dhj7fm55qdhic::::res://assets/recourses/GUI-06.png
+passive_slot.tscn::PackedScene::8530657755660563359::1733461127::0::1::::<><>::res://scripts/passive_slot.gd<>uid://dhj7fm55qdhic::::res://assets/recourses/GUI-06.png
 persistence.gd::GDScript::-1::1733271603::0::1::::<>Node2D<>::
-persistence.tscn::PackedScene::2798348809019237622::1733375944::0::1::::<><>::res://scenes/persistence.gd
-pickups.tscn::PackedScene::5865966226515662736::1733375944::0::1::::<><>::res://scripts/pickups.gd
-player.tscn::PackedScene::7638100734789472753::1733375943::0::1::::<><>::res://scripts/player.gd<>uid://be0omn63mmrue::::res://assets/recourses/coin.png<>uid://cc2mnr7uonkq4::::res://scenes/slot.tscn<>uid://fm2fcuxgc1a0::::res://resources/waepons/magic_wand.tres<>uid://dtskxmbthlwkl::::res://scenes/passive_slot.tscn<>res://scenes/options.gd<>uid://cvds7bsdrq0kg::::res://assets/recourses/shape-bar.png<>uid://dd1s1avqj2fkr::::res://assets/recourses/xp.png<>res://scenes/chest.gd<>res://resources/weapon.gd<>uid://rf8iff3h5j6b::::res://assets/recourses/Fantasy RPG (Toony) 32x32.png<>res://resources/passive_item.gd<>uid://cuol77dwqabyw::::res://resources/passive_items/orbe_poder.tres<>res://scenes/back.gd<>uid://c2cqwnv5xkf1y::::res://assets/recourses/GUI-01.png
-projectile.tscn::PackedScene::3577162928806328938::1733375944::0::1::::<><>::res://scripts/projectile.gd
+persistence.tscn::PackedScene::2798348809019237622::1733461127::0::1::::<><>::res://scenes/persistence.gd
+pickups.tscn::PackedScene::5865966226515662736::1733461128::0::1::::<><>::res://scripts/pickups.gd
+player.tscn::PackedScene::7638100734789472753::1733461127::0::1::::<><>::res://scripts/player.gd<>uid://be0omn63mmrue::::res://assets/recourses/coin.png<>uid://cc2mnr7uonkq4::::res://scenes/slot.tscn<>uid://b7x80msc0mp0v::::res://resources/waepons/metralhadora.tres<>res://scenes/options.gd<>uid://dhjeon1t511x1::::res://resources/waepons/shotgun.tres<>uid://cm0unbhxqfugu::::res://assets/recourses/xp-bar.png<>uid://cvds7bsdrq0kg::::res://assets/recourses/shape-bar.png<>res://scenes/chest.gd<>res://resources/weapon.gd<>uid://rf8iff3h5j6b::::res://assets/recourses/Fantasy RPG (Toony) 32x32.png<>res://resources/passive_item.gd<>res://scenes/back.gd<>uid://c2cqwnv5xkf1y::::res://assets/recourses/GUI-01.png<>uid://llrb4qkfqmja::::res://resources/waepons/rifle.tres<>uid://yg7y5u7h5bl2::::res://resources/passive_items/colete.tres<>uid://bnd0khq4cg17t::::res://assets/character/jackson.png<>uid://b6gtdmughvlcd::::res://resources/passive_items/municao.tres<>uid://dm4lqnkyx56pp::::res://resources/passive_items/super-kit.tres
+projectile.tscn::PackedScene::3577162928806328938::1733461129::0::1::::<><>::res://scripts/projectile.gd
 save_data.gd::GDScript::-1::1733270088::0::1::::<>Node2D<>::
-save_data.tscn::PackedScene::3470008904704249596::1733375945::0::1::::<><>::res://scenes/save_data.gd
+save_data.tscn::PackedScene::3470008904704249596::1733461130::0::1::::<><>::res://scenes/save_data.gd
 skill_tree.gd::GDScript::-1::1733271710::0::1::::<>Panel<>::
-slot.tscn::PackedScene::4969710016514476077::1733375944::0::1::::<><>::res://scripts/slot.gd<>uid://dhj7fm55qdhic::::res://assets/recourses/GUI-06.png
-spawner.tscn::PackedScene::6375371866254303049::1733375944::0::1::::<><>::res://scripts/spawner.gd<>uid://70mrj8ythp2n::::res://scenes/enemy.tscn<>res://resources/EnemyType.gd<>uid://uetfbc5q7uq::::res://resources/enemy/capybara.tres<>uid://noaowxxj83b4::::res://resources/enemy/cyberbara.tres<>uid://dafdkppm2arc0::::res://resources/enemy/cyberbara-canon.tres<>uid://bgiibtl87pf2o::::res://resources/enemy/cyberbara-rocket.tres
+slot.tscn::PackedScene::4969710016514476077::1733461129::0::1::::<><>::res://scripts/slot.gd<>uid://dhj7fm55qdhic::::res://assets/recourses/GUI-06.png
+spawner.tscn::PackedScene::6375371866254303049::1733461129::0::1::::<><>::res://scripts/spawner.gd<>uid://70mrj8ythp2n::::res://scenes/enemy.tscn<>res://resources/EnemyType.gd<>uid://uetfbc5q7uq::::res://resources/enemy/capybara.tres<>uid://noaowxxj83b4::::res://resources/enemy/cyberbara.tres<>uid://dafdkppm2arc0::::res://resources/enemy/cyberbara-canon.tres<>uid://bgiibtl87pf2o::::res://resources/enemy/cyberbara-rocket.tres
 start.gd::GDScript::-1::1733272472::0::1::::<>Button<>::
-test_scene.tscn::PackedScene::3762332364371753970::1733375944::0::1::::<><>::uid://bui2qi4grijnw::::res://assets/TopDownFantasy-Forest/Tiles/Tileset.png<>uid://dg27nyb4hwom8::::res://scenes/player.tscn<>uid://cw3jpck5mkf8d::::res://scenes/spawner.tscn<>uid://cptruvmu46vk7::::res://scenes/pickups.tscn<>uid://6vegkb12ebbc::::res://resources/pickup/blue_gem.tres
+test_scene.tscn::PackedScene::3762332364371753970::1733461129::0::1::::<><>::uid://bui2qi4grijnw::::res://assets/TopDownFantasy-Forest/Tiles/Tileset.png<>uid://dg27nyb4hwom8::::res://scenes/player.tscn<>uid://cw3jpck5mkf8d::::res://scenes/spawner.tscn<>uid://cptruvmu46vk7::::res://scenes/pickups.tscn<>uid://6vegkb12ebbc::::res://resources/pickup/blue_gem.tres
 UI_Gold.gd::GDScript::-1::1733283400::0::1::::<>Label<>::
-upgrade.tscn::PackedScene::3237485813674398862::1733375943::0::1::::<><>::res://scenes/upgrade_button.gd<>uid://dhj7fm55qdhic::::res://assets/recourses/GUI-06.png
+upgrade.tscn::PackedScene::3237485813674398862::1733461127::0::1::::<><>::res://scenes/upgrade_button.gd<>uid://dhj7fm55qdhic::::res://assets/recourses/GUI-06.png
 upgrades.gd::GDScript::-1::1733273934::0::1::::<>Button<>::
-upgrade_button.gd::GDScript::-1::1733282904::0::1::::<>Button<>::
-::res://scripts/::1733375457
+upgrade_button.gd::GDScript::-1::1733459831::0::1::::<>Button<>::
+::res://scripts/::1733460958
 damage.gd::GDScript::-1::1732500682::0::1::::<>Label<>::
 enemy.gd::GDScript::-1::1733268250::0::1::::<>CharacterBody2D<>::
-passive_slot.gd::GDScript::-1::1733375427::0::1::::PassiveSlot<>PanelContainer<>::
+passive_slot.gd::GDScript::-1::1733450811::0::1::::<>PanelContainer<>::
 pickups.gd::GDScript::-1::1733268377::0::1::::<>Area2D<>::
-player.gd::GDScript::-1::1733280973::0::1::::<>CharacterBody2D<>::
-projectile.gd::GDScript::-1::1732758822::0::1::::<>Area2D<>::
-slot.gd::GDScript::-1::1733375457::0::1::::WeaponSlot<>PanelContainer<>::
-spawner.gd::GDScript::-1::1733372239::0::1::::<>Node2D<>::
-::res://shaders/::1733376078
-rainbow_outline.gdshader::Shader::-1::1733376078::0::1::::<><>::
+player.gd::GDScript::-1::1733455694::0::1::::<>CharacterBody2D<>::
+projectile.gd::GDScript::-1::1733460957::0::1::::<>Area2D<>::
+slot.gd::GDScript::-1::1733454266::0::1::::<>PanelContainer<>::
+spawner.gd::GDScript::-1::1733455610::0::1::::<>Node2D<>::
+::res://shaders/::1733461130
+rainbow_outline.gdshader::Shader::-1::1733461130::0::1::::<><>::

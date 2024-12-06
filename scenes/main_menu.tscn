@@ -1,39 +1,21 @@
-[gd_scene load_steps=32 format=3 uid="uid://fydjedrs3tor"]
+[gd_scene load_steps=33 format=3 uid="uid://fydjedrs3tor"]
 
 [ext_resource type="Script" path="res://scenes/skill_tree.gd" id="1_23pfe"]
 [ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_qa1de"]
 [ext_resource type="PackedScene" uid="uid://bmei6hu1k7ep7" path="res://scenes/upgrade.tscn" id="1_v2rqn"]
 [ext_resource type="Script" path="res://resources/skill.gd" id="2_4gqfh"]
 [ext_resource type="Script" path="res://resources/stats.gd" id="3_sid6i"]
-[ext_resource type="Texture2D" uid="uid://c2jliucn16vjh" path="res://assets/RPG Battlers 3/11 v1.png" id="4_uj4ru"]
 [ext_resource type="Script" path="res://scenes/UI_Gold.gd" id="5_5kd0g"]
-[ext_resource type="Texture2D" uid="uid://cyxucy3ieratd" path="res://assets/RPG Battlers 3/11 v2.png" id="5_db6yh"]
-[ext_resource type="Texture2D" uid="uid://p5mhry3gf5bq" path="res://assets/RPG Battlers 3/11.png" id="7_mqpn3"]
+[ext_resource type="Texture2D" uid="uid://bitnxgpq6jo7p" path="res://assets/passive/monicao-pesada.png" id="7_7qjk4"]
+[ext_resource type="Texture2D" uid="uid://co1jeqmqhrkcl" path="res://assets/passive/colete.png" id="8_jgdt7"]
 [ext_resource type="Script" path="res://scenes/start.gd" id="9_3riwx"]
 [ext_resource type="Texture2D" uid="uid://ms4p3ac5fxel" path="res://assets/recourses/GUI-03.png" id="9_70fl2"]
+[ext_resource type="Texture2D" uid="uid://6qg6sqbjxuj0" path="res://assets/passive/super-kit.png" id="9_ij17c"]
 [ext_resource type="Script" path="res://scenes/upgrades.gd" id="11_qmaqr"]
+[ext_resource type="Texture2D" uid="uid://550a1xb2ykp8" path="res://assets/recourses/capa.png" id="12_fkn5k"]
 [ext_resource type="Texture2D" uid="uid://be0omn63mmrue" path="res://assets/recourses/coin.png" id="13_px74i"]
 
 [sub_resource type="Resource" id="Resource_ctweb"]
-script = ExtResource("3_sid6i")
-description = ""
-max_health = 0.0
-recovery = 0.0
-armor = 0.0
-movement_speed = 0.0
-might = 0.1
-area = 0.0
-magnet = 0.0
-growth = 0.0
-
-[sub_resource type="Resource" id="Resource_pn8uq"]
-script = ExtResource("2_4gqfh")
-name = "Might"
-texture = ExtResource("4_uj4ru")
-cost = 10
-stats = SubResource("Resource_ctweb")
-
-[sub_resource type="Resource" id="Resource_krinw"]
 script = ExtResource("3_sid6i")
 description = ""
 max_health = 0.0
@@ -45,10 +27,29 @@ area = 0.0
 magnet = 0.0
 growth = 0.0
 
+[sub_resource type="Resource" id="Resource_pn8uq"]
+script = ExtResource("2_4gqfh")
+name = "Might"
+texture = ExtResource("7_7qjk4")
+cost = 10
+stats = SubResource("Resource_ctweb")
+
+[sub_resource type="Resource" id="Resource_krinw"]
+script = ExtResource("3_sid6i")
+description = ""
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.5
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
 [sub_resource type="Resource" id="Resource_ui7t3"]
 script = ExtResource("2_4gqfh")
 name = "Might 3"
-texture = ExtResource("4_uj4ru")
+texture = ExtResource("7_7qjk4")
 cost = 100
 stats = SubResource("Resource_krinw")
 
@@ -59,7 +60,7 @@ max_health = 0.0
 recovery = 0.0
 armor = 0.0
 movement_speed = 0.0
-might = 0.2
+might = 1.0
 area = 0.0
 magnet = 0.0
 growth = 0.0
@@ -67,49 +68,11 @@ growth = 0.0
 [sub_resource type="Resource" id="Resource_lqeu2"]
 script = ExtResource("2_4gqfh")
 name = "Might 2"
-texture = ExtResource("4_uj4ru")
+texture = ExtResource("7_7qjk4")
 cost = 500
 stats = SubResource("Resource_qp867")
 
 [sub_resource type="Resource" id="Resource_38wbl"]
-script = ExtResource("3_sid6i")
-description = ""
-max_health = 0.0
-recovery = 0.0
-armor = 0.1
-movement_speed = 0.0
-might = 0.0
-area = 0.0
-magnet = 0.0
-growth = 0.0
-
-[sub_resource type="Resource" id="Resource_35enx"]
-script = ExtResource("2_4gqfh")
-name = "Armor"
-texture = ExtResource("5_db6yh")
-cost = 50
-stats = SubResource("Resource_38wbl")
-
-[sub_resource type="Resource" id="Resource_1i7qh"]
-script = ExtResource("3_sid6i")
-description = ""
-max_health = 0.0
-recovery = 0.0
-armor = 0.2
-movement_speed = 0.0
-might = 0.0
-area = 0.0
-magnet = 0.0
-growth = 0.0
-
-[sub_resource type="Resource" id="Resource_ty2mx"]
-script = ExtResource("2_4gqfh")
-name = "Armor 2"
-texture = ExtResource("5_db6yh")
-cost = 100
-stats = SubResource("Resource_1i7qh")
-
-[sub_resource type="Resource" id="Resource_dfgkn"]
 script = ExtResource("3_sid6i")
 description = ""
 max_health = 0.0
@@ -121,10 +84,48 @@ area = 0.0
 magnet = 0.0
 growth = 0.0
 
+[sub_resource type="Resource" id="Resource_35enx"]
+script = ExtResource("2_4gqfh")
+name = "Armor"
+texture = ExtResource("8_jgdt7")
+cost = 50
+stats = SubResource("Resource_38wbl")
+
+[sub_resource type="Resource" id="Resource_1i7qh"]
+script = ExtResource("3_sid6i")
+description = ""
+max_health = 0.0
+recovery = 0.0
+armor = 0.3
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_ty2mx"]
+script = ExtResource("2_4gqfh")
+name = "Armor 2"
+texture = ExtResource("8_jgdt7")
+cost = 100
+stats = SubResource("Resource_1i7qh")
+
+[sub_resource type="Resource" id="Resource_dfgkn"]
+script = ExtResource("3_sid6i")
+description = ""
+max_health = 0.0
+recovery = 0.0
+armor = 0.5
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
 [sub_resource type="Resource" id="Resource_nh15m"]
 script = ExtResource("2_4gqfh")
 name = "Armor 3"
-texture = ExtResource("5_db6yh")
+texture = ExtResource("8_jgdt7")
 cost = 500
 stats = SubResource("Resource_dfgkn")
 
@@ -143,7 +144,7 @@ growth = 0.0
 [sub_resource type="Resource" id="Resource_7qcgn"]
 script = ExtResource("2_4gqfh")
 name = "Recovery"
-texture = ExtResource("7_mqpn3")
+texture = ExtResource("9_ij17c")
 cost = 50
 stats = SubResource("Resource_wpcx5")
 
@@ -162,7 +163,7 @@ growth = 0.0
 [sub_resource type="Resource" id="Resource_73ycp"]
 script = ExtResource("2_4gqfh")
 name = "Recovery 3"
-texture = ExtResource("7_mqpn3")
+texture = ExtResource("9_ij17c")
 cost = 100
 stats = SubResource("Resource_yjp2g")
 
@@ -181,7 +182,7 @@ growth = 0.0
 [sub_resource type="Resource" id="Resource_evn63"]
 script = ExtResource("2_4gqfh")
 name = "Recovery 3"
-texture = ExtResource("7_mqpn3")
+texture = ExtResource("9_ij17c")
 cost = 500
 stats = SubResource("Resource_sv36o")
 
@@ -195,6 +196,7 @@ grow_vertical = 2
 script = ExtResource("1_qa1de")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -224,8 +226,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -80.0
-offset_right = -80.0
+offset_left = -328.0
+offset_top = -255.0
+offset_right = -328.0
+offset_bottom = -255.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -236,13 +240,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = 89.0
+offset_top = 213.0
+offset_right = 179.0
+offset_bottom = 303.0
 grow_horizontal = 2
 grow_vertical = 2
 skill = SubResource("Resource_pn8uq")
+description = "Potência 1"
 
 [node name="Upgrade2" parent="SkillTree/Might" instance=ExtResource("1_v2rqn")]
 layout_mode = 1
@@ -251,13 +256,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -91.0
-offset_top = -20.0
-offset_right = -51.0
-offset_bottom = 20.0
+offset_left = -46.0
+offset_top = 93.0
+offset_right = 44.0
+offset_bottom = 183.0
 grow_horizontal = 2
 grow_vertical = 2
 skill = SubResource("Resource_ui7t3")
+description = "Potência 3"
 
 [node name="Upgrade3" parent="SkillTree/Might" instance=ExtResource("1_v2rqn")]
 layout_mode = 1
@@ -268,11 +274,12 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -162.0
 offset_top = -21.0
-offset_right = -122.0
-offset_bottom = 19.0
+offset_right = -72.0
+offset_bottom = 69.0
 grow_horizontal = 2
 grow_vertical = 2
 skill = SubResource("Resource_lqeu2")
+description = "Potência 3"
 
 [node name="Armor" type="Control" parent="SkillTree"]
 layout_mode = 1
@@ -281,10 +288,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -86.0
-offset_right = 20.0
-offset_bottom = -46.0
+offset_left = -2.0
+offset_top = -25.0
+offset_right = 38.0
+offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -296,12 +303,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -30.0
-offset_top = -30.0
-offset_right = 30.0
-offset_bottom = 30.0
+offset_top = 40.0
+offset_right = 60.0
+offset_bottom = 130.0
 grow_horizontal = 2
 grow_vertical = 2
 skill = SubResource("Resource_35enx")
+description = "Colete 1"
 
 [node name="Upgrade2" parent="SkillTree/Armor" instance=ExtResource("1_v2rqn")]
 layout_mode = 1
@@ -311,12 +319,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -30.0
-offset_top = -101.0
-offset_right = 30.0
-offset_bottom = -41.0
+offset_top = -100.0
+offset_right = 60.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 skill = SubResource("Resource_ty2mx")
+description = "Colete 1"
 
 [node name="Upgrade3" parent="SkillTree/Armor" instance=ExtResource("1_v2rqn")]
 layout_mode = 1
@@ -326,12 +335,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -30.0
-offset_top = -171.0
-offset_right = 30.0
-offset_bottom = -111.0
+offset_top = -248.0
+offset_right = 60.0
+offset_bottom = -158.0
 grow_horizontal = 2
 grow_vertical = 2
 skill = SubResource("Resource_nh15m")
+description = "Colete 1"
 
 [node name="Recovery" type="Control" parent="SkillTree"]
 layout_mode = 1
@@ -340,10 +350,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 40.0
-offset_top = -20.0
-offset_right = 80.0
-offset_bottom = 20.0
+offset_left = -466.0
+offset_top = 181.0
+offset_right = -426.0
+offset_bottom = 221.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -354,13 +364,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
+offset_left = 265.0
 offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_right = 355.0
+offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
 skill = SubResource("Resource_7qcgn")
+description = "Regeneração 1"
 
 [node name="Upgrade2" parent="SkillTree/Recovery" instance=ExtResource("1_v2rqn")]
 layout_mode = 1
@@ -369,13 +380,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 51.0
-offset_top = -20.0
-offset_right = 91.0
-offset_bottom = 20.0
+offset_left = 125.0
+offset_top = -19.0
+offset_right = 215.0
+offset_bottom = 71.0
 grow_horizontal = 2
 grow_vertical = 2
 skill = SubResource("Resource_73ycp")
+description = "Regeneração 2"
 
 [node name="Upgrade3" parent="SkillTree/Recovery" instance=ExtResource("1_v2rqn")]
 layout_mode = 1
@@ -384,15 +396,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 122.0
+offset_left = -25.0
 offset_top = -20.0
-offset_right = 162.0
-offset_bottom = 20.0
+offset_right = 65.0
+offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
 skill = SubResource("Resource_evn63")
+description = "Regeneração 3"
 
 [node name="Menu" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -427,7 +441,23 @@ theme_override_font_sizes/font_size = 20
 text = "Upgrades"
 script = ExtResource("11_qmaqr")
 
+[node name="TextureRect" type="TextureRect" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.0
+offset_top = -233.0
+offset_right = 155.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_fkn5k")
+
 [node name="Back" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -443,6 +473,7 @@ grow_vertical = 0
 text = " Voltar"
 
 [node name="Gold" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 972.0
 offset_top = 23.0
@@ -454,6 +485,7 @@ horizontal_alignment = 2
 script = ExtResource("5_5kd0g")
 
 [node name="GoldTexture" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1107.0
 offset_top = 17.0

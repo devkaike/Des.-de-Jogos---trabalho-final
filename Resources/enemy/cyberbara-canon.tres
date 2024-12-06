@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://dafdkppm2arc0"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=6 format=3 uid="uid://dafdkppm2arc0"]
 
 [ext_resource type="Script" path="res://resources/pickup_resource.gd" id="1_e8y1l"]
-[ext_resource type="Resource" uid="uid://6vegkb12ebbc" path="res://resources/pickup/blue_gem.tres" id="2_r5k7e"]
+[ext_resource type="Resource" uid="uid://cth4t55uxj7b7" path="res://resources/pickup/capsula-super-xp.tres" id="2_7ulpf"]
 [ext_resource type="Script" path="res://resources/EnemyType.gd" id="3_l06sf"]
+[ext_resource type="Resource" uid="uid://b1k537k24dfni" path="res://resources/pickup/capsula-hyper-xp.tres" id="3_mhp65"]
 [ext_resource type="Texture2D" uid="uid://h18cdetuts5k" path="res://assets/enemy/cyberbara-canon.png" id="4_iauiu"]
 
 [resource]
@@ -11,4 +12,4 @@ title = "cyberbara-canon"
 texture = ExtResource("4_iauiu")
 health = 6.0
 damage = 5.0
-drops = Array[ExtResource("1_e8y1l")]([ExtResource("2_r5k7e")])
+drops = Array[ExtResource("1_e8y1l")]([ExtResource("2_7ulpf"), ExtResource("3_mhp65")])

@@ -1,8 +1,10 @@
+Gem
+MultipleShot
+PassiveItem
+SingleShot
+Weapon
+Item
+Pickups
 Enemy
 Chest
 Gold
-SingleShot
-Weapon
-PassiveItem
-Item
-Gem

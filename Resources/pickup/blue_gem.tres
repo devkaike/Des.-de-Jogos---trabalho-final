@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_y4kng")
-XP = 1.0
+XP = 9.0
 title = "Blue Gem"
 icon = ExtResource("1_0jrmy")
 description = "Gains Experiinece points"

@@ -20,10 +20,23 @@ func get_available_resource_in(items)-> Array[Item]:
 			resources.append(item.item)
 	return resources
  
-func add_option(item) -> int:
-	if item.is_upgrabled():
+func add_option(item, is_new) -> int:
+	print("NEW ",is_new)
+	if item.is_upgrabled() and not is_new:
 		var option_slot = OptionSlot.instantiate()
 		option_slot.item = item
+		add_child(option_slot)
+		return 1
+	if is_new:
+		var option_slot = OptionSlot.instantiate()
+		option_slot.item = item
+		option_slot.new_item = true
+		if item is PassiveItem:
+			option_slot.item_type = 'passiveItem'
+			option_slot.item_container = passive_items
+		elif item is Weapon:
+			option_slot.item_type = 'weapon'
+			option_slot.item_container = weapons
 		add_child(option_slot)
 		return 1
 	return 0
@@ -45,7 +58,7 @@ func show_option():
 	avaliable_items.append_array(avaliable_passive_item)
 	
 	var option_size = 0
-	
+	avaliable_items.shuffle()
 	for avaliable_item in avaliable_items:
 		if option_size < 3:
 			if avaliable_item is Weapon:
@@ -57,7 +70,7 @@ func show_option():
 					#weapons.add_child(weapon_slot) # Adiciona ao HBoxContainer de armas
 					#weapons_available.append(avaliable_item) # Atualiza a lista de armas disponíveis
 				
-				option_size += add_option(avaliable_item)
+				option_size += add_option(avaliable_item,avaliable_item not in weapons_available)
 				
 				if avaliable_item.max_level_reached() and avaliable_item.item_needed in passive_item_available:
 					var option_slot = OptionSlot.instantiate()
@@ -74,7 +87,7 @@ func show_option():
 					#passive_items.add_child(passive_slot) # Adiciona ao HBoxContainer de armas
 					#passive_item_available.append(avaliable_item) # Atualiza a lista de armas disponíveis
 				
-				option_size += add_option(avaliable_item)
+				option_size += add_option(avaliable_item,avaliable_item not in passive_item_available)
  
 	if option_size == 0:
 		return

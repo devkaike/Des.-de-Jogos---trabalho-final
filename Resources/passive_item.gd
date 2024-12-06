@@ -10,6 +10,7 @@ func is_upgrabled() -> bool:
 	return false
  
 func upgrade_item():
+	print("IS UPGRADE ",player_reference)
 	if not is_upgrabled():
 		return
  

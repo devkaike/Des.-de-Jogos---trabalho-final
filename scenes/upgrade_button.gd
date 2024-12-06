@@ -1,10 +1,17 @@
 extends Button
  
 @export var skill : Skill
+@export var description: String:
+	set(value):
+		description = value
+		$Label.text = value
+
 var enabled : bool = false:
 	set(value):
 		enabled = value
 		$Panel.show_behind_parent = value
+
+
  
 func _ready():
 	$Item.texture = skill.texture

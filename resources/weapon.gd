@@ -4,7 +4,10 @@ class_name Weapon
 @export var damage : float
 @export var cooldown : float
 @export var speed : float
- 
+@export var ignore_colision:bool
+@export var size:float = 1
+@export var projectile_sprite:Texture2D
+
 @export var projectile_node : PackedScene = preload("res://scenes/projectile.tscn")
 @export var item_needed: PassiveItem
 @export var upgrades: Array[Upgrade]

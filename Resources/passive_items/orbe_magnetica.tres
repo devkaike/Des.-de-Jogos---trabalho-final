@@ -21,3 +21,4 @@ script = ExtResource("1_clrm1")
 upgrades = Array[ExtResource("3_m3wup")]([SubResource("Resource_vs3i4")])
 title = "Orbe Magnetica"
 texture = ExtResource("2_krj6h")
+level = 0

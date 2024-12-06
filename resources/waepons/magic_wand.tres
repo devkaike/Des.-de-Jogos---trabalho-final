@@ -47,3 +47,4 @@ upgrades = Array[ExtResource("4_kiktn")]([SubResource("Resource_vovqu"), SubReso
 evolution = ExtResource("1_seyk2")
 title = "Magic Wand"
 texture = ExtResource("3_iabby")
+level = 1
