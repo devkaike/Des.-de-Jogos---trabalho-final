@@ -1,0 +1,112 @@
+[gd_resource type="Resource" script_class="MultipleShot" load_steps=16 format=3 uid="uid://dhjeon1t511x1"]
+
+[ext_resource type="PackedScene" uid="uid://bq72l6ses06lq" path="res://scenes/projectile.tscn" id="1_8sbih"]
+[ext_resource type="Script" path="res://multipleShot.gd" id="2_g4wid"]
+[ext_resource type="Texture2D" uid="uid://ctay0peqn88wx" path="res://assets/waepons/shotgun.png" id="3_rvn3b"]
+[ext_resource type="Script" path="res://resources/update.gd" id="4_vfdby"]
+[ext_resource type="Script" path="res://resources/projectile_upgrade.gd" id="5_ax4ct"]
+
+[sub_resource type="Resource" id="Resource_mfifx"]
+script = ExtResource("5_ax4ct")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "Shotgun Lazer"
+
+[sub_resource type="Resource" id="Resource_5eafs"]
+script = ExtResource("5_ax4ct")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+damage = 1.0
+cooldown = 0.0
+description = "+1 de dano"
+
+[sub_resource type="Resource" id="Resource_m8ewo"]
+script = ExtResource("5_ax4ct")
+speed = 0.0
+pellets = 1
+spread_angle = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 de Estilhaços"
+
+[sub_resource type="Resource" id="Resource_ebxsy"]
+script = ExtResource("5_ax4ct")
+speed = 0.0
+pellets = 1
+spread_angle = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 de Estilhaços"
+
+[sub_resource type="Resource" id="Resource_lm0hi"]
+script = ExtResource("5_ax4ct")
+speed = 50.0
+pellets = 0
+spread_angle = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+50 de velocidade"
+
+[sub_resource type="Resource" id="Resource_dkly8"]
+script = ExtResource("5_ax4ct")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "-0.5 de Cooldown"
+
+[sub_resource type="Resource" id="Resource_shopt"]
+script = ExtResource("5_ax4ct")
+speed = 0.0
+pellets = 0
+spread_angle = 15.0
+damage = 0.0
+cooldown = 0.0
+description = "+1 de Estilhaços"
+
+[sub_resource type="Resource" id="Resource_yrecv"]
+script = ExtResource("5_ax4ct")
+speed = 0.0
+pellets = 2
+spread_angle = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+2 de Estilhaços"
+
+[sub_resource type="Resource" id="Resource_a41kr"]
+script = ExtResource("5_ax4ct")
+speed = 50.0
+pellets = 0
+spread_angle = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+50 de Velocidade"
+
+[sub_resource type="Resource" id="Resource_m61wt"]
+script = ExtResource("5_ax4ct")
+speed = 0.0
+pellets = 3
+spread_angle = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+3 de Estilhaços"
+
+[resource]
+script = ExtResource("2_g4wid")
+pellets = 5
+spread_angle = 15.0
+damage = 3.0
+cooldown = 2.0
+speed = 150.0
+ignore_colision = false
+projectile_sprite = ExtResource("3_rvn3b")
+projectile_node = ExtResource("1_8sbih")
+upgrades = Array[ExtResource("4_vfdby")]([SubResource("Resource_mfifx"), SubResource("Resource_5eafs"), SubResource("Resource_m8ewo"), SubResource("Resource_ebxsy"), SubResource("Resource_lm0hi"), SubResource("Resource_dkly8"), SubResource("Resource_shopt"), SubResource("Resource_yrecv"), SubResource("Resource_a41kr"), SubResource("Resource_m61wt")])
+title = "Shotgun Lazer"
+texture = ExtResource("3_rvn3b")
+level = 1

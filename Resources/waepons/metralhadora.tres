@@ -1,0 +1,122 @@
+[gd_resource type="Resource" script_class="SingleShot" load_steps=17 format=3 uid="uid://b7x80msc0mp0v"]
+
+[ext_resource type="PackedScene" uid="uid://bq72l6ses06lq" path="res://scenes/projectile.tscn" id="1_ihovl"]
+[ext_resource type="Script" path="res://resources/single_shot.gd" id="2_schgh"]
+[ext_resource type="Texture2D" uid="uid://dybbvai4t6n1u" path="res://assets/waepons/metralhadora-shot.png" id="2_wi5eg"]
+[ext_resource type="Texture2D" uid="uid://bduxx30u3nght" path="res://assets/waepons/metralhadora.png" id="3_y86qh"]
+[ext_resource type="Script" path="res://resources/update.gd" id="4_bny2f"]
+[ext_resource type="Script" path="res://resources/projectile_upgrade.gd" id="5_4a4us"]
+
+[sub_resource type="Resource" id="Resource_bckvv"]
+script = ExtResource("5_4a4us")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+size = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "Metralhadora de mão"
+
+[sub_resource type="Resource" id="Resource_tnjko"]
+script = ExtResource("5_4a4us")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+size = 0.0
+damage = 0.5
+cooldown = 0.0
+description = "+0.5 de Dano"
+
+[sub_resource type="Resource" id="Resource_7uh1m"]
+script = ExtResource("5_4a4us")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+size = 0.0
+damage = 0.0
+cooldown = -0.2
+description = "-0.2 de Cooldown"
+
+[sub_resource type="Resource" id="Resource_vbjrx"]
+script = ExtResource("5_4a4us")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+size = 0.0
+damage = 0.5
+cooldown = 0.0
+description = "+0.5 de Dano"
+
+[sub_resource type="Resource" id="Resource_m24ru"]
+script = ExtResource("5_4a4us")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+size = 0.0
+damage = 0.0
+cooldown = -0.2
+description = "-0.5 de Cooldown"
+
+[sub_resource type="Resource" id="Resource_bvf0p"]
+script = ExtResource("5_4a4us")
+speed = 50.0
+pellets = 0
+spread_angle = 0.0
+size = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+50 de Velocidade"
+
+[sub_resource type="Resource" id="Resource_mu15q"]
+script = ExtResource("5_4a4us")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+size = 0.0
+damage = 0.5
+cooldown = 0.0
+description = "+0.5 de Dano"
+
+[sub_resource type="Resource" id="Resource_mnjjv"]
+script = ExtResource("5_4a4us")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+size = 0.0
+damage = 0.0
+cooldown = 0.0
+description = ""
+
+[sub_resource type="Resource" id="Resource_sj64y"]
+script = ExtResource("5_4a4us")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+size = 0.0
+damage = 1.0
+cooldown = 0.0
+description = "+1 de Dano"
+
+[sub_resource type="Resource" id="Resource_rvqhe"]
+script = ExtResource("5_4a4us")
+speed = 0.0
+pellets = 0
+spread_angle = 0.0
+size = 0.0
+damage = 0.0
+cooldown = -0.3
+description = "-0.5 de Cooldown"
+
+[resource]
+script = ExtResource("2_schgh")
+damage = 1.0
+cooldown = 1.0
+speed = 200.0
+ignore_colision = false
+size = 1.0
+projectile_sprite = ExtResource("2_wi5eg")
+projectile_node = ExtResource("1_ihovl")
+upgrades = Array[ExtResource("4_bny2f")]([SubResource("Resource_bckvv"), SubResource("Resource_tnjko"), SubResource("Resource_7uh1m"), SubResource("Resource_vbjrx"), SubResource("Resource_m24ru"), SubResource("Resource_bvf0p"), SubResource("Resource_mu15q"), SubResource("Resource_mnjjv"), SubResource("Resource_sj64y"), SubResource("Resource_rvqhe")])
+title = "Metralhadora de Mão"
+texture = ExtResource("3_y86qh")
+level = 1

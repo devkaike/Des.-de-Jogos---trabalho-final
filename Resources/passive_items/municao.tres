@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=10 format=3 uid="uid://b6gtdmughvlcd"]
+
+[ext_resource type="Script" path="res://resources/passive_item.gd" id="1_pc5ao"]
+[ext_resource type="Texture2D" uid="uid://bitnxgpq6jo7p" path="res://assets/passive/monicao-pesada.png" id="2_ipbdb"]
+[ext_resource type="Script" path="res://resources/stats.gd" id="3_qgvti"]
+
+[sub_resource type="Resource" id="Resource_yxdyo"]
+script = ExtResource("3_qgvti")
+description = "+0.1 de Potencia"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.1
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_oqbkg"]
+script = ExtResource("3_qgvti")
+description = "+0.2 de Potencia"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.2
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_tgoqw"]
+script = ExtResource("3_qgvti")
+description = "+0.3 de Potencia"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.3
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_vhfsx"]
+script = ExtResource("3_qgvti")
+description = "+0.4 de Potencia"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.4
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_58y08"]
+script = ExtResource("3_qgvti")
+description = "+0.5 de Potencia"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.5
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_y8cqs"]
+script = ExtResource("3_qgvti")
+description = "+1 de Potencia"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 1.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_pc5ao")
+upgrades = Array[ExtResource("3_qgvti")]([SubResource("Resource_yxdyo"), SubResource("Resource_oqbkg"), SubResource("Resource_tgoqw"), SubResource("Resource_vhfsx"), SubResource("Resource_58y08"), SubResource("Resource_y8cqs")])
+title = "Munição Pesada"
+texture = ExtResource("2_ipbdb")
+level = 1

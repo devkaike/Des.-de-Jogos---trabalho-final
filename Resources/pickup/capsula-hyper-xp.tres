@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://b1k537k24dfni"]
+
+[ext_resource type="Texture2D" uid="uid://cs6wh4m85pawa" path="res://assets/recourses/hyper-xp.png" id="1_rchjy"]
+[ext_resource type="Script" path="res://resources/pickup/gem.gd" id="2_sxwns"]
+
+[resource]
+script = ExtResource("2_sxwns")
+XP = 6.0
+title = "Hyper Capsula de XP"
+icon = ExtResource("1_rchjy")
+description = ""

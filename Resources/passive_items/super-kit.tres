@@ -1,0 +1,84 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=10 format=3 uid="uid://dm4lqnkyx56pp"]
+
+[ext_resource type="Script" path="res://resources/passive_item.gd" id="1_icdxe"]
+[ext_resource type="Texture2D" uid="uid://6qg6sqbjxuj0" path="res://assets/passive/super-kit.png" id="2_14twn"]
+[ext_resource type="Script" path="res://resources/stats.gd" id="3_2ised"]
+
+[sub_resource type="Resource" id="Resource_yxog2"]
+script = ExtResource("3_2ised")
+description = "+10 de Vida"
+max_health = 10.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_v1xhu"]
+script = ExtResource("3_2ised")
+description = "+0.2 de Regeneração"
+max_health = 0.0
+recovery = 0.2
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_aqfco"]
+script = ExtResource("3_2ised")
+description = "+20 de Vida"
+max_health = 20.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_ilsbo"]
+script = ExtResource("3_2ised")
+description = "+0.2 de Regeneração"
+max_health = 0.0
+recovery = 0.2
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_4apxa"]
+script = ExtResource("3_2ised")
+description = "+0.2 de Regeneração"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_uq4sr"]
+script = ExtResource("3_2ised")
+description = "+50 de Vida"
+max_health = 50.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_icdxe")
+upgrades = Array[ExtResource("3_2ised")]([SubResource("Resource_yxog2"), SubResource("Resource_v1xhu"), SubResource("Resource_aqfco"), SubResource("Resource_ilsbo"), SubResource("Resource_4apxa"), SubResource("Resource_uq4sr")])
+title = "Super Kit"
+texture = ExtResource("2_14twn")
+level = 1

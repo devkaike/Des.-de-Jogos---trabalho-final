@@ -1,0 +1,416 @@
+[gd_scene load_steps=32 format=3 uid="uid://dg27nyb4hwom8"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_dir11"]
+[ext_resource type="Texture2D" uid="uid://be0omn63mmrue" path="res://assets/recourses/coin.png" id="2_5b4v0"]
+[ext_resource type="PackedScene" uid="uid://cc2mnr7uonkq4" path="res://scenes/slot.tscn" id="2_p4y0e"]
+[ext_resource type="Resource" uid="uid://b7x80msc0mp0v" path="res://resources/waepons/metralhadora.tres" id="4_scumo"]
+[ext_resource type="Script" path="res://scenes/options.gd" id="4_vql3h"]
+[ext_resource type="Texture2D" uid="uid://cm0unbhxqfugu" path="res://assets/recourses/xp-bar.png" id="7_1utpm"]
+[ext_resource type="Texture2D" uid="uid://cvds7bsdrq0kg" path="res://assets/recourses/shape-bar.png" id="7_u3ucq"]
+[ext_resource type="Script" path="res://scenes/chest.gd" id="8_qhogu"]
+[ext_resource type="Texture2D" uid="uid://rf8iff3h5j6b" path="res://assets/recourses/Fantasy RPG (Toony) 32x32.png" id="9_gn8so"]
+[ext_resource type="Script" path="res://scenes/back.gd" id="10_vc6sh"]
+[ext_resource type="Texture2D" uid="uid://c2cqwnv5xkf1y" path="res://assets/recourses/GUI-01.png" id="10_vr7kc"]
+[ext_resource type="Texture2D" uid="uid://bnd0khq4cg17t" path="res://assets/character/jackson.png" id="16_2xwux"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3525g"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o3p2"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbm6f"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(128, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aryeb"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(160, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7wnv"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3erx"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(128, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ej44"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(160, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jbpu"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(96, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8siob"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(128, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcoxu"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(160, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8vfv"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_new8u"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(128, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epcjq"]
+atlas = ExtResource("9_gn8so")
+region = Rect2(160, 224, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_76u2w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3525g")
+}],
+"loop": true,
+"name": &"idle_boss_chest",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8o3p2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbm6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aryeb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7wnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3erx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ej44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jbpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8siob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcoxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8vfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_new8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epcjq")
+}],
+"loop": false,
+"name": &"open_boss_chest",
+"speed": 24.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8iq2a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ceq7u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fekws"]
+size = Vector2(34, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2l15"]
+size = Vector2(34, 43)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x0nwu"]
+radius = 50.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_dir11")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Debug" type="VBoxContainer" parent="UI"]
+offset_left = 8.0
+offset_top = 117.0
+offset_right = 48.0
+offset_bottom = 302.0
+
+[node name="MaxHealthDebug" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="RecoveryDebug" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ArmorDebug" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MovementSpeedDebug" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MightDebug" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MagnetDebug" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="GrowthDebug" type="Label" parent="UI/Debug"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Gold" type="Label" parent="UI"]
+unique_name_in_owner = true
+offset_left = 976.0
+offset_top = 63.0
+offset_right = 1115.0
+offset_bottom = 86.0
+text = "0"
+horizontal_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI"]
+offset_left = 1118.0
+offset_top = 60.0
+offset_right = 1148.0
+offset_bottom = 90.0
+texture = ExtResource("2_5b4v0")
+stretch_mode = 6
+
+[node name="Waepons" type="HBoxContainer" parent="UI"]
+offset_left = 6.0
+offset_top = 30.0
+offset_right = 134.0
+offset_bottom = 70.0
+
+[node name="Slot" parent="UI/Waepons" instance=ExtResource("2_p4y0e")]
+layout_mode = 2
+item = ExtResource("4_scumo")
+
+[node name="PassiveItems" type="HBoxContainer" parent="UI"]
+offset_left = 6.0
+offset_top = 74.0
+offset_right = 134.0
+offset_bottom = 114.0
+
+[node name="XP" type="TextureProgressBar" parent="UI"]
+unique_name_in_owner = true
+self_modulate = Color(0.160784, 1, 1, 1)
+offset_right = 1152.0
+offset_bottom = 27.0
+max_value = 10.0
+nine_patch_stretch = true
+texture_under = ExtResource("7_u3ucq")
+texture_progress = ExtResource("7_1utpm")
+
+[node name="Level" type="Label" parent="UI/XP"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1110.0
+offset_top = 33.0
+offset_right = 1150.0
+offset_bottom = 56.0
+text = "Lv 1 "
+
+[node name="Chest" type="NinePatchRect" parent="UI"]
+process_mode = 3
+custom_minimum_size = Vector2(300, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_vr7kc")
+patch_margin_left = 7
+patch_margin_top = 5
+patch_margin_right = 6
+patch_margin_bottom = 5
+script = ExtResource("8_qhogu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/Chest"]
+position = Vector2(150, 111)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_76u2w")
+animation = &"open_boss_chest"
+autoplay = "idle_boss_chest"
+frame = 11
+frame_progress = 1.0
+
+[node name="Open" type="Button" parent="UI/Chest"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -47.0
+offset_right = 24.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8iq2a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ceq7u")
+text = "Abrir"
+
+[node name="Close" type="Button" parent="UI/Chest"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.5
+offset_top = -47.0
+offset_right = 26.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8iq2a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ceq7u")
+text = "Fechar"
+
+[node name="Rewards" type="Control" parent="UI/Chest"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="UI/Chest/Rewards"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 91.0
+offset_right = 80.0
+offset_bottom = 131.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="UI/Chest/Rewards"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 43.0
+offset_right = 102.0
+offset_bottom = 83.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="UI/Chest/Rewards"]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 25.0
+offset_right = 171.0
+offset_bottom = 65.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="UI/Chest/Rewards"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 52.0
+offset_right = 248.0
+offset_bottom = 92.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="UI/Chest/Rewards"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 96.0
+offset_right = 261.0
+offset_bottom = 136.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Back" type="Button" parent="UI"]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -21.5
+offset_right = 91.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Voltar para o Menu"
+script = ExtResource("10_vc6sh")
+
+[node name="Options" type="VBoxContainer" parent="UI"]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("4_vql3h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("16_2xwux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 0)
+shape = SubResource("RectangleShape2D_fekws")
+
+[node name="SelfDamage" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="SelfDamage"]
+unique_name_in_owner = true
+position = Vector2(-6, -0.5)
+shape = SubResource("RectangleShape2D_f2l15")
+
+[node name="Health" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 0.14, 0.14, 1)
+self_modulate = Color(1, 0.141176, 0.141176, 1)
+offset_left = -17.0
+offset_top = -28.0
+offset_right = 17.0
+offset_bottom = -24.0
+value = 100.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Magnet" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="Magnet" type="CollisionShape2D" parent="Magnet"]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_x0nwu")
+
+[connection signal="pressed" from="UI/Chest/Open" to="UI/Chest" method="_on_open_pressed"]
+[connection signal="pressed" from="UI/Chest/Close" to="UI/Chest" method="_on_close_pressed"]
+[connection signal="pressed" from="UI/Back" to="UI/Back" method="_on_pressed"]
+[connection signal="body_entered" from="SelfDamage" to="." method="_on_self_damage_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Magnet" to="." method="_on_magnet_area_entered"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://m14jeurethre"]
+
+[ext_resource type="Texture2D" uid="uid://dd1s1avqj2fkr" path="res://assets/recourses/xp.png" id="1_56n7a"]
+[ext_resource type="Script" path="res://resources/pickup/gem.gd" id="2_kd3wt"]
+
+[resource]
+script = ExtResource("2_kd3wt")
+XP = 1.0
+title = "Capsula de XP"
+icon = ExtResource("1_56n7a")
+description = ""
